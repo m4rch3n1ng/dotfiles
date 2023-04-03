@@ -1,0 +1,19 @@
+[core]
+	editor = code --wait
+	autocrlf = false
+	eol = lf
+	excludesFile = ~/.gitignore
+[commit]
+	gpgsign = true
+[alias]
+	graph = log --oneline --decorate --graph --exclude refs/stash --all --pretty=tformat:'%C(auto)%h%C(blue) %ad%C(auto)%d %s' --date=short
+	l = log --pretty=tformat:'%C(auto)%h%C(blue) %ad%C(auto)%d %s' --date=short
+[log]
+	date = iso-local
+[tag]
+	gpgsign = true
+[pager]
+	branch = false
+	stash = false
+[init]
+	defaultBranch = "main"

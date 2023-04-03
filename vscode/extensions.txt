@@ -1,0 +1,7 @@
+eamodio.gitlens
+rust-lang.rust-analyzer
+svelte.svelte-vscode
+tamasfe.even-better-toml
+Tyriar.windows-terminal
+wix.vscode-import-cost
+yzhang.markdown-all-in-one

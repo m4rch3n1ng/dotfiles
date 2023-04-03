@@ -1,0 +1,35 @@
+{
+	/* vanilla */
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.bracketPairColorization.enabled": false,
+	"editor.detectIndentation": false,
+	"editor.fontFamily": "\"Fira Code\", Consolas, monospace",
+	"editor.fontLigatures": "\"liga\" 0, \"calt\" 0, \"cv01\", \"cv16\"",
+	"editor.fontWeight": "500",
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"editor.insertSpaces": false,
+	"explorer.compactFolders": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.sortOrder": "type",
+	"extensions.ignoreRecommendations": true,
+	"files.autoSave": "afterDelay",
+	"files.eol": "\n",
+	"security.workspace.trust.untrustedFiles": "open",
+	"telemetry.telemetryLevel": "off",
+	"terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"terminal.integrated.persistentSessionReviveProcess": "never",
+	"workbench.colorTheme": "Solarized Light",
+	"workbench.editorAssociations": {
+		"git-rebase-todo": "default"
+	},
+	"workbench.startupEditor": "none",
+	/* ext */
+	"gitlens.codeLens.enabled": false,
+	"gitlens.currentLine.scrollable": false,
+	"gitlens.hovers.annotations.over": "annotation",
+	"gitlens.hovers.currentLine.over": "line",
+	"gitlens.telemetry.enabled": false,
+	"svelte.enable-ts-plugin": true
+}

@@ -60,8 +60,10 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
 	docker
 	gitfast
+	safe-paste
 )
 
+# source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 ## user config
@@ -78,6 +80,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 export EDITOR="code"
+export VISUAL="code"
 export GPG_TTY=$(tty)
 unset HISTFILE
 
@@ -85,7 +88,11 @@ unset HISTFILE
 # export ARCHFLAGS="-arch x86_64"
 
 # alias
-alias cls=clear
+alias cls="clear"
+alias ls="ls --group-directories-first --color=auto --file-type --time-style=\"+%Y-%m-%d %H:%M:%S\""
+alias ll="ls --file-type -l"
+alias lt="ls -hs1SF"
+alias y="yarn run"
 
 ## ls color via https://github.com/seebi/dircolors-solarized
 eval `dircolors "$HOME/.dircolors.ansi-dark"`

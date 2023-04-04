@@ -58,13 +58,20 @@ HIST_STAMPS="yyyy-mm-dd"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-	docker
 	gitfast
 	safe-paste
+	zsh-syntax-highlighting
+	command-not-found
 )
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# offer to install missing package if command is not found
+if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
+	source /usr/share/zsh/functions/command-not-found.zsh
+	export PKGFILE_PROMPT_INSTALL_MISSING=1
+fi
 
 ## user config
 

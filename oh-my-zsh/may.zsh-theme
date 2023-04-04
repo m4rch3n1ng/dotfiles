@@ -88,7 +88,7 @@ mk_mayzsh () {
 	git_path=$(mayzsh_git_path)
 
 	local user="${yellow}$(eval ${MAYZSH_USER})${reset}"
-	local dir="${magenta}$(eval ${MAYZSH_DIR})${reset}"
+	local dir="${magenta}%c${reset}"
 	local git=$(mayzsh_git)
 
 	[[ ${MAYZSH_NEWLINE} = "true" ]] && print -rP ""

@@ -40,7 +40,8 @@ https://wiki.archlinux.org/title/Ncmpcpp
 https://www.youtube.com/watch?v=sZIEdI9TS2U  
 https://github.com/LukeSmithxyz/voidrice/tree/master/.config/mpd  
 https://wiki.archlinux.org/title/Music_Player_Daemon  
-https://github.com/LukeSmithxyz/voidrice/tree/master/.config/ncmpcpp
+https://github.com/LukeSmithxyz/voidrice/tree/master/.config/ncmpcpp  
+https://pastebin.com/Ayrc541G
 
 ### keymap
 
@@ -73,7 +74,9 @@ https://github.com/ohmyzsh/ohmyzsh/blob/d47e1d65f66f9bb2e7a96ba58797b33f0e91a623
 ## theme
 
 https://wallpaperaccess.com/full/1711593.gif  
-https://www.reddit.com/r/unixporn/comments/rvyuwe/comment/hr8ejlh/
+https://www.reddit.com/r/unixporn/comments/rvyuwe/comment/hr8ejlh/  
+https://www.reddit.com/r/unixporn/comments/wv01nw/comment/ilck0ls/  
+https://github.com/catppuccin/catppuccin
 
 ## hyprland
 

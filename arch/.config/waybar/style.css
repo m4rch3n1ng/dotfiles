@@ -6,7 +6,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "monospace", "JetBrainsMono", "Material Design Icons";
+	font-family: "JetBrainsMono", "Material Design Icons", "monospace";
 	font-weight: bold;
 	font-size: 16px;
 	min-height: 0;

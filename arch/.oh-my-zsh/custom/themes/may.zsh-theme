@@ -1,6 +1,5 @@
 # color
 reset=$'\e[0m'
-italic=$'\e[3m'
 red=$'\e[31m'
 green=$'\e[32m'
 yellow=$'\e[33m'

@@ -1,0 +1,88 @@
+/* @import "./mocha.less"; */
+/* todo make custom theme */
+
+/* --- global --- */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "monospace", "JetBrainsMono", "Material Design Icons";
+	font-weight: bold;
+	font-size: 16px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: none;
+	color: #2b2b2c;
+}
+
+/* --- module config --- */
+
+/* - general - */
+
+#custom-powermenu,
+#workspaces,
+#tray,
+#pulseaudio,
+#clock {
+	background: #e7e7ec;
+	opacity: 0.8;
+	padding: 0px 10px;
+	/* margin-top: 16px; */
+	border: 0;
+	border-radius: 10px;
+}
+
+/* - power menu - */
+
+/* - workspaces - */
+
+#workspaces {
+	margin-left: 12px;
+}
+
+#workspaces button {
+	padding: 5px;
+	color: #313244;
+	margin-right: 5px;
+}
+
+#workspaces button.active {
+	color: #a6adc8;
+}
+
+#workspaces button.focused {
+	color: #a6adc8;
+	background: #eba0ac;
+	border-radius: 10px;
+}
+
+#workspaces button.urgent {
+	color: #11111b;
+	background: #a6e3a1;
+	border-radius: 10px;
+}
+
+#workspaces button:hover {
+	background: #11111b;
+	color: #cdd6f4;
+	border-radius: 10px;
+}
+
+/* - tray - */
+
+/* - audio - */
+
+#pulseaudio:not(.microphone) {
+	border-radius: 10px 0px 0px 10px;
+	margin-left: 12px;
+}
+
+#pulseaudio.microphone {
+	border-radius: 0px 10px 10px 0px;
+	margin-right: 12px;
+}
+
+/* - clock - */
+

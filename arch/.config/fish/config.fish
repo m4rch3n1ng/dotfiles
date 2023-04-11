@@ -16,3 +16,6 @@ alias hypr="Hyprland"
 
 # launch fish_ssh_agent
 fish_ssh_agent
+
+# add to path
+fish_add_path $HOME/.local/bin

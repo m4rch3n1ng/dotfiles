@@ -114,8 +114,7 @@ function start_agent {
 	/usr/bin/ssh-add;
 }
 
-# Source SSH settings, if applicable
-
+# source SSH settings, if applicable
 if [ -f "${SSH_ENV}" ]; then
 	. "${SSH_ENV}" > /dev/null
 	#ps ${SSH_AGENT_PID} doesn't work under cywgin

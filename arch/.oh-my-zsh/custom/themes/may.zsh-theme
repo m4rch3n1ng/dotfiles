@@ -48,25 +48,41 @@ mayzsh_git_branch () {
 # thx https://github.com/ohmyzsh/ohmyzsh/blob/d47e1d65f66f9bb2e7a96ba58797b33f0e91a623/themes/peepcode.zsh-theme#L14
 # thx https://github.com/zthxxx/jovial/blob/bd705f1b74ecb1dfc5a3637193498191a016bb09/jovial.zsh-theme#L749
 mayzsh_git_mode () {
-	if [[ -e "${git_path}/BISECT_LOG" ]]; then
-		echo ${MAYZSH_GIT_MODE_BISECT}
-	elif [[ -e "${git_path}/MERGE_HEAD" ]]; then
-		echo ${MAYZSH_GIT_MODE_MERGE}
-	elif [[ -e "${git_path}/rebase" || -e "${git_path}/rebase-apply" || -e "${git_path}/rebase-merge" || -e "${git_path}/../.dotest" ]]; then
+	if [[ -e "${git_path}/rebase" || -e "${git_path}/rebase-apply" || -e "${git_path}/rebase-merge" ]]; then
 		local branch proc
 
-		if [[ -f "${git_path}/rebase-merge/msgnum" ]] then
+		if [[ -f "${git_path}/rebase-merge/msgnum" ]]; then
 			local step="$(< ${git_path}/rebase-merge/msgnum)"
 			local total="$(< ${git_path}/rebase-merge/end)"
 			proc=" ${step}/${total}"
 		fi
 
-		if [[ -f "${git_path}/rebase-merge/head-name" ]] then
+		if [[ -f "${git_path}/rebase-merge/head-name" ]]; then
 			local branch_str="$(< ${git_path}/rebase-merge/head-name)"
 			[[ ${branch_str} ]] && branch=" ${green}${branch_str#refs/heads/}"
 		fi
 
 		echo "${MAYZSH_GIT_MODE_REBASE}${proc}${branch}"
+	elif [[ -e "${git_path}/BISECT_LOG" ]]; then
+		local branch
+		if [[ -f "$git_path/BISECT_START" ]]; then
+			local branch_str="$(< ${git_path}/BISECT_START)"
+			branch=" ${branch_str}"
+		fi
+
+		echo "${MAYZSH_GIT_MODE_BISECT}${branch}"
+	elif [[ -e "${git_path}/MERGE_HEAD" ]]; then
+		echo ${MAYZSH_GIT_MODE_MERGE}
+	elif [[ -f "$git_path/CHERRY_PICK_HEAD" ]]; then
+		local pick_long="$(< ${git_path}/CHERRY_PICK_HEAD)"
+		local pick=$(git rev-parse --short ${pick_long})
+
+		echo "chp :${pick}"
+	elif [[ -f "$git_path/REVERT_HEAD" ]]; then
+		local rvt_long=$(< "${git_path}/REVERT_HEAD")
+		local rvt=$(git rev-parse --short ${rvt_long})
+
+		echo "rvt :${rvt}"
 	fi
 }
 

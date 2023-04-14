@@ -72,15 +72,21 @@ mayzsh_git_mode () {
 
 		echo "${MAYZSH_GIT_MODE_BISECT}${branch}"
 	elif [[ -e "${git_path}/MERGE_HEAD" ]]; then
-		echo ${MAYZSH_GIT_MODE_MERGE}
+		local merge_long=$(< "${git_path}/MERGE_HEAD")
+		local merge=$(git rev-parse --short ${merge_long})
+		local mrg=$(git name-rev --no-undefined --always --exclude="tags/*" "${merge}")
+
+		echo "${MAYZSH_GIT_MODE_MERGE} :${mrg}"
 	elif [[ -f "$git_path/CHERRY_PICK_HEAD" ]]; then
 		local pick_long="$(< ${git_path}/CHERRY_PICK_HEAD)"
 		local pick=$(git rev-parse --short ${pick_long})
+		local chp=$(git name-rev --no-undefined --always --exclude="tags/*" "${pick}")
 
-		echo "chp :${pick}"
+		echo "chp :${chp}"
 	elif [[ -f "$git_path/REVERT_HEAD" ]]; then
-		local rvt_long=$(< "${git_path}/REVERT_HEAD")
-		local rvt=$(git rev-parse --short ${rvt_long})
+		local revert_long=$(< "${git_path}/REVERT_HEAD")
+		local revert=$(git rev-parse --short ${revert_long})
+		local rvt=$(git name-rev --no-undefined --always --exclude="tags/*" "${revert}")
 
 		echo "rvt :${rvt}"
 	fi

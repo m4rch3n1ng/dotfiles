@@ -41,7 +41,33 @@ mayzsh_git_branch () {
 	else # not on a branch
 		[[ ${ret} == 128 ]] && return  # not a git repo
 		ref=$(mayzsh_git_wrap rev-parse --short HEAD 2> /dev/null) || return
-		echo "${MAYZSH_GIT_HASH_PREFIX}${ref}" # hash prefixed to distingush from branch
+		local hash=$(mayzsh_git_hash $ref)
+		echo "${MAYZSH_GIT_HASH_PREFIX}${hash}" # hash prefixed to distingush from branch
+	fi
+}
+
+mayzsh_git_hash () {
+	local hash_long=$1
+	local hash_short=$(git rev-parse --short $hash_long)
+	local hash_rel=$(git name-rev --no-undefined --always --exclude="tags/*" --exclude="remotes/*" "$hash_short" 2> /dev/null)
+
+	local spl1=$(echo $hash_rel | cut -d " " -f1)
+	local spl2=$(echo $hash_rel | cut -d " " -f2)
+
+	if [ "$spl1" = "$spl2" ]; then
+		hash_rel=$(git name-rev --no-undefined --always --exclude="tags/*" "$hash_short" 2> /dev/null)
+		spl1=$(echo $hash_rel | cut -d " " -f1)
+		spl2=$(echo $hash_rel | cut -d " " -f2)
+
+		if [ "$spl1" = "$spl2" ]; then
+			unset hash_rel
+		fi
+	fi
+
+	if [ ${hash_rel} ]; then
+		echo ${hash_rel}
+	else
+		echo ${hash_short}
 	fi
 }
 
@@ -72,23 +98,20 @@ mayzsh_git_mode () {
 
 		echo "${MAYZSH_GIT_MODE_BISECT}${branch}"
 	elif [[ -e "${git_path}/MERGE_HEAD" ]]; then
-		local merge_long=$(< "${git_path}/MERGE_HEAD")
-		local merge=$(git rev-parse --short ${merge_long})
-		local mrg=$(git name-rev --no-undefined --always --exclude="tags/*" "${merge}")
+		local hash_long=$(< "${git_path}/MERGE_HEAD")
+		local hash=$(mayzsh_git_hash ${hash_long})
 
-		echo "${MAYZSH_GIT_MODE_MERGE} :${mrg}"
+		echo "${MAYZSH_GIT_MODE_MERGE} :${hash}"
 	elif [[ -f "$git_path/CHERRY_PICK_HEAD" ]]; then
-		local pick_long="$(< ${git_path}/CHERRY_PICK_HEAD)"
-		local pick=$(git rev-parse --short ${pick_long})
-		local chp=$(git name-rev --no-undefined --always --exclude="tags/*" "${pick}")
+		local hash_long="$(< ${git_path}/CHERRY_PICK_HEAD)"
+		local hash=$(mayzsh_git_hash ${hash_long})
 
-		echo "chp :${chp}"
+		echo "chp :${hash}"
 	elif [[ -f "$git_path/REVERT_HEAD" ]]; then
-		local revert_long=$(< "${git_path}/REVERT_HEAD")
-		local revert=$(git rev-parse --short ${revert_long})
-		local rvt=$(git name-rev --no-undefined --always --exclude="tags/*" "${revert}")
+		local hash_long=$(< "${git_path}/REVERT_HEAD")
+		local hash=$(mayzsh_git_hash ${hash_long})
 
-		echo "rvt :${rvt}"
+		echo "rvt :${hash}"
 	fi
 }
 

@@ -8,6 +8,8 @@
 [alias]
 	graph = log --oneline --decorate --graph --exclude refs/stash --all --pretty=tformat:'%C(auto)%h%C(blue) %ad%C(auto)%d %s' --date=short
 	l = log --pretty=tformat:'%C(auto)%h%C(blue) %ad%C(auto)%d %s' --date=short
+	amend = commit --amend --no-edit
+	continue = "-c core.editor=true rebase --continue"
 [log]
 	date = iso-local
 [tag]

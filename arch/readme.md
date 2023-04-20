@@ -1,34 +1,36 @@
 ## arch / linux
 
-### keymap
+### tmp / ressources
+
+#### keymap
 
 https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration
 
-## fish
+#### fish
 
 https://reckoning.dev/blog/fish-shell/  
 https://github.com/jorgebucaran/nvm.fish
 
-## oh my zsh
+#### oh my zsh
 
-### [setup]
+##### [setup]
 
 ```sh
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-### .zshrc
+##### .zshrc
 
 https://stackoverflow.com/a/18915067  
 https://github.com/seebi/dircolors-solarized
 
-### may.zsh-theme
+##### may.zsh-theme
 
 https://github.com/Moarram/headline  
 https://github.com/zthxxx/jovial/blob/bd705f1b74ecb1dfc5a3637193498191a016bb09/jovial.zsh-theme#L749  
 https://github.com/ohmyzsh/ohmyzsh/blob/d47e1d65f66f9bb2e7a96ba58797b33f0e91a623/themes/peepcode.zsh-theme#L14
 
-## theme
+#### theme
 
 https://wallpaperaccess.com/full/1711593.gif  
 https://www.reddit.com/r/unixporn/comments/rvyuwe/comment/hr8ejlh/  
@@ -39,7 +41,15 @@ https://github.com/catppuccin/waybar
 https://github.com/catppuccin/kitty  
 https://github.com/catppuccin/mako
 
-## hyprland
+#### hyprland
 
 https://github.com/soldoestech/hyprland  
 https://github.com/MathisP75/hyppuccin
+https://github.com/nawfalmrouyan/hyprland
+
+#### arch misc
+
+##### laptop
+
+https://wiki.archlinux.org/title/Power_management
+https://en.wikipedia.org/wiki/Standby_power

@@ -4,4 +4,5 @@ svelte.svelte-vscode
 tamasfe.even-better-toml
 Tyriar.windows-terminal
 wix.vscode-import-cost
+yoavbls.pretty-ts-errors
 yzhang.markdown-all-in-one

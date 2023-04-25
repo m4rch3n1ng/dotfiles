@@ -45,7 +45,7 @@ do_install () {
 check_does_exist "yay"
 check_does_exist "curl"
 
-yn_do=$(ask_yn "do you want to install the fish shell and the plugins?")
+yn_do=$(ask_yn "do you want to install the fish shell and plugins?")
 [ ! $yn_do ] && exit
 
 do_install "fish"

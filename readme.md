@@ -1,8 +1,8 @@
 # may config
 
-## install scripts
+## .install
 
-**exclusive to arch**
+***exclusive to arch linux***
 
 install scripts for `[ fish ]`
 

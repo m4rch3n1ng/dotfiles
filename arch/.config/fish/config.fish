@@ -29,4 +29,5 @@ bind \cw backward-kill-bigword
 fish_ssh_agent
 
 # add to path
+fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin

@@ -95,7 +95,6 @@
 
 	"clock": {
 		"format": " {:%Y-%m-%d %H:%M:%S} ",
-		// "on-click": "kitty --title btop sh -c \"btop\"", /* todo do? */
 		"interval": 1
 	}
 

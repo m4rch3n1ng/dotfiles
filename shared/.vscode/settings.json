@@ -17,7 +17,7 @@
 	"files.eol": "\n",
 	"security.workspace.trust.untrustedFiles": "open",
 	"telemetry.telemetryLevel": "off",
-	"terminal.external.linuxExec": "/usr/bin/kitty",
+	"terminal.external.linuxExec": "/usr/bin/alacritty",
 	"terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.defaultProfile.linux": "fish",

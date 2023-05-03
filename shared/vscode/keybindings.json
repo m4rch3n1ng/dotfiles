@@ -1,0 +1,157 @@
+// place your key bindings in this file to override the defaults
+[
+	/* --- comment --- */
+	/* line comment */
+	{
+		"key": "ctrl+[Backslash]",
+		"command": "editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+7",
+		"command": "-editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	/* block comment */
+	{
+		"key": "ctrl+shift+[Backslash]",
+		"command": "editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "-editor.action.blockComment",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	/* --- select --- */
+	/* move cursor word */
+	{
+		"key": "alt+left",
+		"command": "cursorWordPartLeft"
+	},
+	{
+		"key": "shift+alt+left",
+		"command": "cursorWordPartLeftSelect"
+	},
+	{
+		"key": "alt+right",
+		"command": "cursorWordPartRight"
+	},
+	{
+		"key": "shift+alt+right",
+		"command": "cursorWordPartRightSelect"
+	},
+	/* smart select */
+	{
+		"key": "shift+alt+down",
+		"command": "editor.action.smartSelect.expand",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+right",
+		"command": "-editor.action.smartSelect.expand",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+left",
+		"command": "-editor.action.smartSelect.shrink",
+		"when": "editorTextFocus"
+	},
+	/* --- multiline --- */
+	/* duplicate cursor */
+	{
+		"key": "ctrl+alt+down",
+		"command": "editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "-editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "-editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	/* copy line */
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "-editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+alt+up",
+		"command": "-editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	/* --- terminal --- */
+	/* toggle */
+	{
+		"key": "ctrl+[Semicolon]",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+shift+[Equal]",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	/* tab */
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.terminal.new",
+		"when": "terminal.active"
+	},
+	/* clear */
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.terminal.clear",
+		"when": "terminal.active"
+	},
+	/* --- overwrite --- */
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
+	},
+	{
+		"key": "alt+left",
+		"command": "-workbench.action.terminal.focusPreviousPane",
+		"when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+right",
+		"command": "-workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+left",
+		"command": "-gitlens.key.alt+left",
+		"when": "gitlens:key:alt+left"
+	},
+	{
+		"key": "alt+right",
+		"command": "-gitlens.key.alt+right",
+		"when": "gitlens:key:alt+right"
+	}
+]

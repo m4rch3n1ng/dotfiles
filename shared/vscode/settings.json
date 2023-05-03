@@ -1,9 +1,9 @@
 {
-	/* vanilla */
+	/* --- vanilla --- */
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.bracketPairColorization.enabled": false,
 	"editor.detectIndentation": false,
-	"editor.fontFamily": "\"Fira Code\", Consolas, monospace",
+	"editor.fontFamily": "\"Fira Code\", \"Material Design Icons\", Consolas, monospace",
 	"editor.fontLigatures": "\"liga\" 0, \"calt\" 0, \"cv01\", \"cv16\"",
 	"editor.fontWeight": "500",
 	"editor.inlayHints.enabled": "offUnlessPressed",
@@ -15,6 +15,7 @@
 	"extensions.ignoreRecommendations": true,
 	"files.autoSave": "afterDelay",
 	"files.eol": "\n",
+	"git.openRepositoryInParentFolders": "never",
 	"security.workspace.trust.untrustedFiles": "open",
 	"telemetry.telemetryLevel": "off",
 	"terminal.external.linuxExec": "/usr/bin/alacritty",
@@ -28,11 +29,15 @@
 		"git-rebase-todo": "default"
 	},
 	"workbench.startupEditor": "none",
-	/* ext */
+	/* --- ext --- */
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.scrollable": false,
 	"gitlens.hovers.annotations.over": "annotation",
 	"gitlens.hovers.currentLine.over": "line",
 	"gitlens.telemetry.enabled": false,
+	"markdown.extension.toc.updateOnSave": false,
+	"markdown.extension.toc.unorderedList.marker": "*",
+	"rust-analyzer.lens.implementations.enable": false,
+	"rust-analyzer.lens.enable": false,
 	"svelte.enable-ts-plugin": true
 }

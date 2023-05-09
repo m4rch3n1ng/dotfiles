@@ -6,7 +6,7 @@
 #window {
 	font-size: 16px;
 	margin: 0px;
-	background-color: rgba(20, 22, 30, 0.6);
+	background-color: rgba(253, 246, 227, 0.6);
 }
 
 #input {
@@ -15,7 +15,7 @@
 	padding: 4px 10px;
 	margin: 4px;
 	border: none;
-	color: #cdd6f4;
+	color: #586e75;
 	font-weight: bold;
 	outline: none;
 	border-radius: 12px;
@@ -45,13 +45,13 @@
 }
 
 #text {
-	color: #cdd6f4;
+	color: #586e75;
 	margin: 4px 12px;
 	border-radius: 16px;
 }
 
 #text:selected {
-	color: #1e1e2e;
+	color: #586e75;
 	margin: 4px 12px;
 	border: none;
 	border-radius: 16px;
@@ -68,5 +68,5 @@
 	margin: 0px 0px;
 	border: none;
 	border-radius: 12px;
-	background: #cba6f7;
+	background: #2aa198;
 }

@@ -2,7 +2,7 @@
 
 entries="󰜉 reboot\n󰤆 shutdown\n󰗽 logout\n󰽥 suspend"
 
-selected=$(echo -e $entries | wofi --width 250 --height 260 --dmenu --hide_search --hide-scroll --cache-file /dev/null | awk '{print tolower($2)}')
+selected=$(echo -e $entries | wofi --width 250 --height 260 --dmenu --hide-scroll --cache-file /dev/null | awk '{print tolower($2)}')
 case $selected in
 	logout)
 		exec hyprctl dispatch exit NOW;;

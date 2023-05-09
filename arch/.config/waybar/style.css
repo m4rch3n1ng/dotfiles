@@ -1,5 +1,20 @@
-/* @import "./mocha.less"; */
 /* todo make custom theme */
+
+/* --- global --- */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "JetBrainsMono", "Material Design Icons", "monospace";
+	font-weight: bold;
+	font-size: 16px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: none;
+	color: #586e75;
+}
 
 /* --- global --- */
 
@@ -38,35 +53,25 @@ window#waybar {
 /* - workspaces - */
 
 #workspaces {
-	margin-left: 12px;
+	margin-left: 10px;
 }
 
 #workspaces button {
-	padding: 5px;
 	color: #313244;
-	margin-right: 5px;
-}
-
-#workspaces button.active {
-	color: #a6adc8;
-}
-
-#workspaces button.focused {
-	color: #a6adc8;
-	background: #eba0ac;
 	border-radius: 10px;
+}
+
+#workspaces button.active, #workspaces button.focused {
+	color: #a6adc8;
 }
 
 #workspaces button.urgent {
-	color: #11111b;
-	background: #a6e3a1;
-	border-radius: 10px;
+	color: #a6e3a1;
 }
 
 #workspaces button:hover {
 	background: #11111b;
 	color: #cdd6f4;
-	border-radius: 10px;
 }
 
 /* - tray - */
@@ -75,12 +80,73 @@ window#waybar {
 
 #pulseaudio:not(.microphone) {
 	border-radius: 10px 0px 0px 10px;
-	margin-left: 12px;
+	margin-left: 10px;
 }
 
 #pulseaudio.microphone {
 	border-radius: 0px 10px 10px 0px;
-	margin-right: 12px;
+	margin-right: 10px;
+}
+
+/* - clock - */
+
+
+
+/* --- module config --- */
+
+/* - general - */
+
+#custom-powermenu,
+#workspaces,
+#tray,
+#pulseaudio,
+#clock {
+	background: #fdf6e3;
+	opacity: 0.8;
+	padding: 0px 10px;
+	border: 0;
+	border-radius: 10px;
+}
+
+/* - power menu - */
+
+/* - workspaces - */
+
+#workspaces {
+	margin-left: 10px;
+}
+
+#workspaces button {
+	border-radius: 10px;
+}
+
+#workspaces button.urgent {
+	color: #dc322f;
+}
+
+#workspaces button:hover {
+	background: #002B36;
+	color: #839496;
+}
+
+#workspaces button.active, #workspaces button.focused {
+	color: #2aa198;
+}
+
+/* - tray - */
+
+/* - audio - */
+
+#pulseaudio:not(.microphone) {
+	border-radius: 10px 0px 0px 10px;
+	margin-left: 10px;
+	border-right: none;
+}
+
+#pulseaudio.microphone {
+	border-radius: 0px 10px 10px 0px;
+	margin-right: 10px;
+	border-left: none;
 }
 
 /* - clock - */

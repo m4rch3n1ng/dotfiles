@@ -18,7 +18,7 @@
 	"git.openRepositoryInParentFolders": "never",
 	"security.workspace.trust.untrustedFiles": "open",
 	"telemetry.telemetryLevel": "off",
-	"terminal.external.linuxExec": "/usr/bin/alacritty",
+	"terminal.external.linuxExec": "/usr/bin/kitty",
 	"terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.defaultProfile.linux": "fish",
@@ -29,6 +29,9 @@
 		"git-rebase-todo": "default"
 	},
 	"workbench.startupEditor": "none",
+	/* --- lang --- */
+	"javascript.preferences.quoteStyle": "double",
+	"typescript.preferences.quoteStyle": "double",
 	/* --- ext --- */
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.scrollable": false,
@@ -37,6 +40,9 @@
 	"gitlens.telemetry.enabled": false,
 	"markdown.extension.toc.updateOnSave": false,
 	"markdown.extension.toc.unorderedList.marker": "*",
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"prettier.semi": false,
 	"rust-analyzer.lens.implementations.enable": false,
 	"rust-analyzer.lens.enable": false,
 	"svelte.enable-ts-plugin": true

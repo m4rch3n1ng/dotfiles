@@ -30,17 +30,6 @@ https://github.com/Moarram/headline
 https://github.com/zthxxx/jovial/blob/bd705f1b74ecb1dfc5a3637193498191a016bb09/jovial.zsh-theme#L749  
 https://github.com/ohmyzsh/ohmyzsh/blob/d47e1d65f66f9bb2e7a96ba58797b33f0e91a623/themes/peepcode.zsh-theme#L14
 
-#### theme
-
-https://wallpaperaccess.com/full/1711593.gif  
-https://www.reddit.com/r/unixporn/comments/rvyuwe/comment/hr8ejlh/  
-https://www.reddit.com/r/unixporn/comments/wv01nw/comment/ilck0ls/
-
-https://github.com/catppuccin/catppuccin  
-https://github.com/catppuccin/waybar  
-https://github.com/catppuccin/kitty  
-https://github.com/catppuccin/mako
-
 #### hyprland
 
 https://github.com/soldoestech/hyprland  

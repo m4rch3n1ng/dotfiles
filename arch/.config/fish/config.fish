@@ -11,6 +11,8 @@ alias lt="ls -hs1SF"
 alias y="yarn run"
 alias hypr="Hyprland"
 
+function rm; echo "use trash instead"; end
+
 function tmp
 	set -l _tmp (mktemp -d)
 	echo "tmp $_tmp"

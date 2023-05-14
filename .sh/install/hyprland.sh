@@ -140,7 +140,8 @@ link_dotfiles "arch/.config/kitty/theme.conf" "$HOME/.config/kitty/theme.conf"
 # <misc />
 wr_note "linking misc config"
 ## font
-link_dotfiles "arch/.config/fontconfig/fonts.conf"
+wr_note "linking font config"
+link_dotfiles "arch/.config/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 ## keymap
 wr_note "linking keymap"
 link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"

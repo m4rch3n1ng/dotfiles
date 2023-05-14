@@ -16,82 +16,6 @@ window#waybar {
 	color: #586e75;
 }
 
-/* --- global --- */
-
-* {
-	border: none;
-	border-radius: 0;
-	font-family: "JetBrainsMono", "Material Design Icons", "monospace";
-	font-weight: bold;
-	font-size: 16px;
-	min-height: 0;
-}
-
-window#waybar {
-	background: none;
-	color: #2b2b2c;
-}
-
-/* --- module config --- */
-
-/* - general - */
-
-#custom-powermenu,
-#workspaces,
-#tray,
-#pulseaudio,
-#clock {
-	background: #e7e7ec;
-	opacity: 0.8;
-	padding: 0px 10px;
-	border: 0;
-	border-radius: 10px;
-}
-
-/* - power menu - */
-
-/* - workspaces - */
-
-#workspaces {
-	margin-left: 10px;
-}
-
-#workspaces button {
-	color: #313244;
-	border-radius: 10px;
-}
-
-#workspaces button.active, #workspaces button.focused {
-	color: #a6adc8;
-}
-
-#workspaces button.urgent {
-	color: #a6e3a1;
-}
-
-#workspaces button:hover {
-	background: #11111b;
-	color: #cdd6f4;
-}
-
-/* - tray - */
-
-/* - audio - */
-
-#pulseaudio:not(.microphone) {
-	border-radius: 10px 0px 0px 10px;
-	margin-left: 10px;
-}
-
-#pulseaudio.microphone {
-	border-radius: 0px 10px 10px 0px;
-	margin-right: 10px;
-}
-
-/* - clock - */
-
-
-
 /* --- module config --- */
 
 /* - general - */
@@ -106,6 +30,7 @@ window#waybar {
 	padding: 0px 10px;
 	border: 0;
 	border-radius: 10px;
+	border: 2px solid rgb(89, 89, 89);
 }
 
 /* - power menu - */

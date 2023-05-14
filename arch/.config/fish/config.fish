@@ -1,13 +1,17 @@
+# <main />
 # disable history
 set -g fish_history ""
 # use cli tty for gpg (in theory)
 set -gx GPG_TTY (tty)
 
-# alias
+# <alias />
 alias cls="printf '\033[2J\033[3J\033[1;1H'"
-alias ls="ls --group-directories-first --color=auto --file-type --time-style=\"+%Y-%m-%d %H:%M:%S\""
-alias ll="ls --file-type -l"
-alias lt="ls -hs1SF"
+alias ls="ls --group-directories-first --color=auto --classify --time-style=\"+%Y-%m-%d %H:%M:%S\""
+alias ll="ls -l"
+alias lt="ls -hs1S"
+alias la="ls -A"
+alias lla="ll -A"
+alias lta="lt -A"
 alias y="yarn run"
 alias hypr="Hyprland"
 
@@ -24,12 +28,13 @@ function take
 	cd $argv[1]
 end
 
-# bindings
+# <bindings />
 bind \cw backward-kill-bigword
 
+# <extensions />
 # launch fish_ssh_agent
 fish_ssh_agent
 
-# add to path
+# <path />
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin

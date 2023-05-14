@@ -2,7 +2,7 @@
 	// wiki https://github.com/Alexays/Waybar/wiki/
 	/* -- config -- */
 
-	"layer": "top",
+	"layer": "bottom",
 	"position": "top",
 
 	"height": 44,

@@ -1,6 +1,7 @@
 // modified standard german qwertz layout for iso keyboards
 // modifications
 // 	- removed capslock and swapped it with key 0 (shift "=", alt-gr "}")
+// 	- swapped % (shift 5 => shift 6) and & (shift 6 => shift 5)
 
 xkb_keymap {
 xkb_keycodes "(unnamed)" {
@@ -1201,11 +1202,11 @@ xkb_symbols "(unnamed)" {
     };
     key <AE05> {
         type= "FOUR_LEVEL",
-        symbols[Group1]= [               5,         percent,         onehalf,    threeeighths ]
+        symbols[Group1]= [               5,       ampersand,         onehalf,    threeeighths ]
     };
     key <AE06> {
         type= "FOUR_LEVEL",
-        symbols[Group1]= [               6,       ampersand,         notsign,     fiveeighths ]
+        symbols[Group1]= [               6,         percent,         notsign,     fiveeighths ]
     };
     key <AE07> {
         type= "FOUR_LEVEL",

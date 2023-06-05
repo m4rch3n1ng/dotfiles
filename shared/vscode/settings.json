@@ -43,6 +43,7 @@
 	"prettier.useTabs": true,
 	"prettier.tabWidth": 4,
 	"prettier.semi": false,
+	"rust-analyzer.check.command": "clippy",
 	"rust-analyzer.lens.implementations.enable": false,
 	"rust-analyzer.lens.enable": false,
 	"svelte.enable-ts-plugin": true

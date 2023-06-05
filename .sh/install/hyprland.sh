@@ -51,6 +51,7 @@
 ## noto-fonts-extra - noto fonts extra emojis
 ## ttf-fira-code - programming font
 ## ttf-fira-mono - fira code w/o ligatures
+## ttf-roboto-mono - roboto mono
 ## ttf-jetbrains-mono - main monospace font
 ## ttf-material-design-icons-git - material design icons for waybar, etc
 ## ttf-jetbrains-mono-nerd - patched monospace font (for debug)
@@ -105,7 +106,7 @@ for soft in \
 	pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet \
 	p7zip p7zip-gui trashy jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-	ttf-fira-code ttf-fira-mono ttf-jetbrains-mono ttf-material-design-icons-git ttf-jetbrains-mono-nerd \
+	ttf-fira-code ttf-fira-mono ttf-roboto-mono ttf-jetbrains-mono ttf-material-design-icons-git ttf-jetbrains-mono-nerd \
 	lxappearance xfce4-settings
 do
 	do_install $soft

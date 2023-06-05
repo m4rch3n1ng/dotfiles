@@ -3,6 +3,8 @@
 set -g fish_history ""
 # use cli tty for gpg (in theory)
 set -gx GPG_TTY (tty)
+# journalctl
+set -gx SYSTEMD_LESS FRMK
 
 # <alias />
 alias cls="printf '\033[2J\033[3J\033[1;1H'"
@@ -27,6 +29,13 @@ function take
 	mkdir -p $argv[1]
 	cd $argv[1]
 end
+
+# <abbr />
+# https://fishshell.com/docs/current/interactive.html#abbreviations
+function multicd
+	echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
+end
+abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 # <bindings />
 bind \cw backward-kill-bigword

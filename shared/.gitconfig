@@ -13,6 +13,8 @@
 	gpgsign = true
 [init]
 	defaultBranch = "main"
+[interactive]
+	singleKey = true
 [log]
 	date = iso-local
 [pager]

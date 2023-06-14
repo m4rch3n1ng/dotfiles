@@ -2,6 +2,7 @@
 	/* --- vanilla --- */
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.bracketPairColorization.enabled": false,
+	"editor.cursorStyle": "block",
 	"editor.detectIndentation": false,
 	"editor.fontFamily": "\"Fira Code\", \"Material Design Icons\", Consolas, monospace",
 	"editor.fontLigatures": "\"liga\" 0, \"calt\" 0, \"cv01\", \"cv16\"",
@@ -46,5 +47,6 @@
 	"rust-analyzer.check.command": "clippy",
 	"rust-analyzer.lens.implementations.enable": false,
 	"rust-analyzer.lens.enable": false,
+	"rust-analyzer.showUnlinkedFileNotification": false,
 	"svelte.enable-ts-plugin": true
 }

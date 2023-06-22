@@ -123,6 +123,25 @@
 		"command": "workbench.action.terminal.clear",
 		"when": "terminal.active && terminal.focus"
 	},
+	/* --- workbench --- */
+	/* files */
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "shift+f2",
+		"command": "renameFile",
+		"when": "foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+	},
 	/* --- overwrite --- */
 	{
 		"key": "ctrl+q",

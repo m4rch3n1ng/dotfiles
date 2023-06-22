@@ -1,9 +1,10 @@
 [alias]
 	amend = commit --amend --no-edit
 	continue = -c core.editor=true rebase --continue
-	graph = log --oneline --decorate --graph --exclude refs/stash --all --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
+	graph = log --graph --exclude refs/stash --all --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	st = status -sb
+	patch = add --patch
 [core]
 	editor = code --wait
 	autocrlf = false

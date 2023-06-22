@@ -21,7 +21,7 @@
 ## polkit-gnome - get root access for some gui apps
 ## xdg-desktop-portal-hyprland-git - xdg desktop portal for hyprland
 ## hyprpicker-git - hyprland color picker
-## hyprshot ?
+## hyprshot-git - screenshots on hyprland
 ## swappy - edit screenshots
 ## grim - take screenshot
 ## slurp - select screen space
@@ -102,7 +102,7 @@ for soft in \
 	hyprland waybar-hyprland wofi mako swww swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
-	hyprshot swappy grim slurp wl-clipboard clipmon-git \
+	hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
 	pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet \
 	p7zip p7zip-gui trashy jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \

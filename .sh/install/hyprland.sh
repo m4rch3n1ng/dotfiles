@@ -112,8 +112,8 @@ do
 	do_install $soft
 done
 
-# <config />
-wr_note "linking desktop configs"
+# <desktop />
+wr_note "setting desktop configs"
 ## hyprland
 wr_note "linking hyprland config"
 link_dotfiles "arch/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
@@ -138,14 +138,39 @@ wr_note "linking kitty config"
 link_dotfiles "arch/.config/kitty/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 link_dotfiles "arch/.config/kitty/theme.conf" "$HOME/.config/kitty/theme.conf"
 
+# <programming />
+wr_note "setting dev environment"
+## git
+wr_note "copying git config"
+copy_dotfiles "shared/.gitconfig" "$HOME/.gitconfig"
+link_dotfiles "shared/.gitignore" "$HOME/.gitignore"
+## rust
+wr_note "linking rust config"
+link_dotfiles "shared/.cargo/config.toml" "$HOME/.cargo/config.toml"
+
+# <system />
+wr_note "setting system config"
+## ssh-agent
+wr_note "setting up ssh-agent"
+copy_dotfiles "arch/.config/systemd/user/ssh-agent.service" "$HOME/.config/systemd/user/ssh-agent.service"
+copy_dotfiles "arch/.ssh/config" "$HOME/.ssh/config"
+systemctl --user enable ssh-agent.service
+systemctl --user start ssh-agent.service
+## misc
+wr_note "setting electron flags"
+link_dotfiles "arch/.config/electron-flags.conf" "$HOME/.config/electron-flags.conf"
+
 # <misc />
-wr_note "linking misc config"
+wr_note "setting misc config"
 ## font
 wr_note "linking font config"
 link_dotfiles "arch/.config/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 ## keymap
 wr_note "linking keymap"
-link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"
+link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"#
+## yay
+wr_note "linking yay config"
+link_dotfiles "arch/.config/yay/config.json" "$HOME/.config/yay/config.json"
 
 # <done />
 wr_okay "done hyprland.sh"

@@ -6,11 +6,6 @@
 
 https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration
 
-#### fish
-
-https://reckoning.dev/blog/fish-shell/  
-https://github.com/jorgebucaran/nvm.fish
-
 #### oh my zsh
 
 ##### [setup]

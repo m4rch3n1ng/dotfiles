@@ -11,13 +11,11 @@ do_install "fish"
 do_install "fisher"
 
 # <plugins />
-wr_note "installing fish plugins"
-wr_note "[ m4rch3n1ng/may.fish, m4rch3n1ng/ssh-agent.fish ]"
+wr_note "installing fish plugin"
+wr_note "[ m4rch3n1ng/may.fish ]"
 
 fisher install "m4rch3n1ng/may.fish"
-fisher install "m4rch3n1ng/ssh-agent.fish"
-
-wr_okay "installed fish plugins"
+wr_okay "installed fish plugin"
 
 # <config />
 ## greet

@@ -39,10 +39,10 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 # <bindings />
 bind \cw backward-kill-bigword
+bind \cl "printf '\033[2J\033[3J\033[1;1H'; commandline -f repaint"
 
-# <extensions />
-# launch fish_ssh_agent
-fish_ssh_agent
+# <ssh />
+set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # <path />
 fish_add_path $HOME/.cargo/bin

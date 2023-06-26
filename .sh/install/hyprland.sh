@@ -21,7 +21,7 @@
 ## polkit-gnome - get root access for some gui apps
 ## xdg-desktop-portal-hyprland-git - xdg desktop portal for hyprland
 ## hyprpicker-git - hyprland color picker
-## hyprshot-git - screenshots on hyprland
+## hyprshot-git - take screenshots on hyprland
 ## swappy - edit screenshots
 ## grim - take screenshot
 ## slurp - select screen space

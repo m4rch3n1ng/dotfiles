@@ -1,0 +1,2 @@
+[alias]
+pedantic = [ "clippy", "--", "-Wclippy::pedantic", "-Aclippy::redundant_closure_for_method_calls", "-Aclippy::uninlined_format_args" ]

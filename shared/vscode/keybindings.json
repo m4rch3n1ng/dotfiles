@@ -27,23 +27,33 @@
 	/* word part */
 	{
 		"key": "alt+left",
-		"command": "cursorWordPartLeft"
+		"command": "cursorWordPartLeft",
+		"when": "textInputFocus && !editorReadonly"
 	},
 	{
 		"key": "shift+alt+left",
-		"command": "cursorWordPartLeftSelect"
+		"command": "cursorWordPartLeftSelect",
+		"when": "textInputFocus && !editorReadonly"
 	},
 	{
 		"key": "alt+right",
-		"command": "cursorWordPartRight"
+		"command": "cursorWordPartRight",
+		"when": "textInputFocus && !editorReadonly"
 	},
 	{
 		"key": "shift+alt+right",
-		"command": "cursorWordPartRightSelect"
+		"command": "cursorWordPartRightSelect",
+		"when": "textInputFocus && !editorReadonly"
 	},
 	{
 		"key": "alt+backspace",
-		"command": "deleteWordPartLeft"
+		"command": "deleteWordPartLeft",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+delete",
+		"command": "deleteWordPartRight",
+		"when": "textInputFocus && !editorReadonly"
 	},
 	/* smart select */
 	{
@@ -99,6 +109,11 @@
 		"command": "editor.action.copyLinesUpAction",
 		"when": "editorTextFocus && !editorReadonly"
 	},
+	/* misc */
+	{
+		"key": "ctrl+k i",
+		"command": "changeEditorIndentation"
+	},
 	/* --- terminal --- */
 	/* toggle */
 	{
@@ -115,7 +130,7 @@
 	{
 		"key": "ctrl+t",
 		"command": "workbench.action.terminal.new",
-		"when": "terminal.active && terminal.focus"
+		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
 	},
 	/* clear */
 	{
@@ -166,5 +181,15 @@
 		"key": "alt+right",
 		"command": "-gitlens.key.alt+right",
 		"when": "gitlens:key:alt+right"
+	},
+	{
+		"key": "alt+delete",
+		"command": "-notebook.cell.clearOutputs",
+		"when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
+	},
+	{
+		"key": "ctrl+k i",
+		"command": "-interactiveEditor.start",
+		"when": "interactiveEditorHasProvider && !editorReadonly"
 	}
 ]

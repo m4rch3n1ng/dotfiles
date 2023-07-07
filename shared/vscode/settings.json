@@ -24,6 +24,7 @@
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.defaultProfile.linux": "fish",
 	"terminal.integrated.persistentSessionReviveProcess": "never",
+	"terminal.integrated.persistentSessionScrollback": 0,
 	"terminal.integrated.shellIntegration.decorationsEnabled": "never",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.editorAssociations": {
@@ -33,6 +34,7 @@
 	/* --- lang --- */
 	"javascript.preferences.quoteStyle": "double",
 	"typescript.preferences.quoteStyle": "double",
+	"javascript.suggest.completeFunctionCalls": true,
 	/* --- ext --- */
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.scrollable": false,

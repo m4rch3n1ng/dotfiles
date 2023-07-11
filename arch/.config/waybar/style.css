@@ -60,11 +60,14 @@ window#waybar {
 
 /* - tray - */
 
+#tray {
+	margin-right: 10px;
+}
+
 /* - audio - */
 
 #pulseaudio:not(.microphone) {
 	border-radius: 10px 0px 0px 10px;
-	margin-left: 10px;
 	border-right: none;
 }
 

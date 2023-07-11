@@ -74,6 +74,7 @@
 		"on-scroll-up": "pamixer -i 5",
 		"on-scroll-down": "pamixer -d 5",
 		"scroll-step": 5,
+		"reverse-scrolling": true,
 		// todo laptop perhaps?
 		"format-icons": {
 			"default": [ "󰕿", "󰖀", "󰕾" ]
@@ -86,10 +87,11 @@
 		"format-source": "󰍬 {volume:3}%",
 		"format-source-muted": "󰍭 mute",
 		"on-click": "pamixer --default-source -t",
-		"on-click-right": "pavucontrol",
+		"on-click-right": "pavucontrol --tab=4",
 		"on-scroll-up": "pamixer --default-source -i 5",
 		"on-scroll-down": "pamixer --default-source -d 5",
-		"scroll-step": 5
+		"scroll-step": 5,
+		"reverse-scrolling": true
 	},
 
 	/* - clock - */
@@ -105,8 +107,7 @@
 
 	/* "backlight": {
 		"device": "intel_backlight",
-		"format": "{icon} {percent:3}%",
-		"format-icons": [ "", "", "" ],
+		"format": "{icon} {percent:3}% ",
 		"format-icons": [ "󰃞", "󰃟", "󰃠" ],
 		"on-scroll-up": "brightnessctl set 1%+",
 		"on-scroll-down": "brightnessctl set 1%-",
@@ -119,29 +120,34 @@
 			"warning": 30,
 			"critical": 20
 		},
-		"format": "{icon} {capacity}%",
-		"format-charging": "󰂄 {capacity}%",
-		"format-plugged": "󰂄 {capacity}%",
-		"format-alt": "{time} {icon}",
+		"format": " {icon} {capacity:3}%",
+		"format-charging": " 󰂄 {capacity:3}%",
+		"format-plugged": " 󰂄 {capacity:3}%",
 		"format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
 	},
 
+	"temperature": {
+		"thermal-zone": 1,
+		"format": "󰔏 {temperatureC}°C",
+		"critical-threshold": 80,
+		"format-critical": "󰸁 {temperatureC}°C",
+		"tooltip": false
+	},
+
 	"network": {
-		// "interface": "wlp2*", // (Optional) To force the use of this interface
-		"format-wifi": "󰖩 {signalStrength}%",
-		// "format-wifi": "{icon} {signalStrength}%",
-		// "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
-		"format-ethernet": "󰊗 {ipaddr}",
+		"format-wifi": " {icon} {signalStrength}%",
+		"format-ethernet": " 󰊗 {ipaddr}",
+		"format-linked": " 󰊗 {ifname} (no ip)",
+		"format-disconnected": " 󰀦 disconnected",
+		"format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
 		// "tooltip-format": "{essid} - {ifname} via {gwaddr} 󰊗"
-		"tooltip-format": "{ipaddr} - {bandwidthDownBytes}mb/{bandwidthUpBytes}mb",
-		"format-linked": "󰊗 {ifname} (no ip)",
-		"format-disconnected": "󰀦 disconnected"
+		"tooltip-format": "{essid} - {bandwidthDownBytes}/{bandwidthUpBytes}"
 	},
 
 	"bluetooth": {
-		"format": "󰂯 {status}",
-		"format-disabled": "", // an empty format will hide the module
-		"format-connected": "󰂯 {num_connections}",
+		"format": "󰂯 {status} ",
+		"format-disabled": "󰂲 ", // an empty format will hide the module
+		"format-connected": "󰂯 on {num_connections} ",
 		"tooltip-format": "{device_alias}",
 		"tooltip-format-connected": "󰂯 {device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}"

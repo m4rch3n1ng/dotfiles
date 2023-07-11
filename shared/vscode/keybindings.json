@@ -187,9 +187,15 @@
 		"command": "-notebook.cell.clearOutputs",
 		"when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
 	},
+	/* --- misc--- */
 	{
 		"key": "ctrl+k i",
 		"command": "-interactiveEditor.start",
 		"when": "interactiveEditorHasProvider && !editorReadonly"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
 	}
 ]

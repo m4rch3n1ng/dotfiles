@@ -1,42 +1,46 @@
 {
-	"timeStamp": 1679108048490,
-	"version": "1.47.4",
-	"userSettings": {
-		"importedLists": [],
-		"popupPanelSections": 31
-	},
-	"selectedFilterLists": [
-		"user-filters",
-		"assets.json",
-		"public_suffix_list.dat",
-		"ublock-badlists",
-		"ublock-filters",
-		"ublock-badware",
-		"ublock-privacy",
-		"ublock-abuse",
-		"ublock-unbreak",
-		"ublock-quick-fixes",
-		"easylist",
-		"easyprivacy",
-		"urlhaus-1",
-		"plowe-0",
-		"DEU-0"
-	],
-	"hiddenSettings": {},
-	"whitelist": [
-		"# chrome-scheme",
-		"about-scheme",
-		"chrome-extension-scheme",
-		"edge-scheme",
-		"moz-extension-scheme",
-		"newtab.chrome-scheme",
-		"opera-scheme",
-		"sleepy.zone",
-		"vivaldi-scheme",
-		"wyciwyg-scheme"
-	],
-	"dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
-	"urlFilteringString": "",
-	"hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-scripting: www.duden.de true\nno-scripting: www.bedeutungonline.de true\nno-scripting: www.healthline.com true\nno-scripting: blog.feathersjs.com true",
-	"userFilters": "! twitter.com\ntwitter.com##div[class=\"css-1dbjc4n r-1awozwy r-1kihuf0 r-18u37iz r-1pi2tsx r-1777fci r-1pjcn9w r-xr3zp9 r-1xcajam r-ipm5af r-g6jmlv\"]\ntwitter.com##div[class=\"css-1dbjc4n r-l5o3uw r-1upvrn0\"]\ntwitter.com#$?#html { overflow: auto !important; }\n!! twitter.com - new posts\ntwitter.com##.r-6416eg.r-o7ynqc.r-oyd9sg.r-ymttw5.r-1ny4l3l.r-1777fci.r-y3da5r.r-sdzlij.r-l5o3uw.css-1dbjc4n.css-18t94o4\n\n! heise.de\nheise.de###sp_message_container_619211\nheise.de#$?#html { overflow: auto !important; position: unset !important; }\nheise.de#$?#body { overflow-x: visible !important; }\n\n! twitch.tv\ntwitch.tv#$?#*:focus { outline: none; }\n\n! www.reddit.com - new posts\nwww.reddit.com##._369llFshxbL10dgfLlIApJ\n! www.reddit.com##._3QVmoK4pfXYk-E13BWrpzd._3LO_LEpMLN8-uaedpg6nl4\n\n! nytimes.com\nnytimes.com#$?##site-content { position: relative !important; }\nnytimes.com###gateway-content\n\n! 2023-01-14 https://www.twitch.tv\nwww.twitch.tv##.chat-line__message.beAYWq.Layout-sc-1xcs6mc-0\nwww.twitch.tv##.chat-line__message.beAYWq.Layout-sc-1xcs6mc-0\n\n! 2023-01-14 https://www.tumblr.com\nwww.tumblr.com##.XnKJk.D0OOd.jpu7k\n\n! 2023-01-24 https://twitter.com\ntwitter.com##.r-12rgx7y.r-lrvibr.r-1ld3bg.r-1gg5ah6.r-u8s1d.r-1ozsyd3.r-1yadl64.r-sdzlij.r-l5o3uw.css-1dbjc4n\n\n! 2023-01-24 https://www.tumblr.com\nwww.tumblr.com##.kp7A0.qn4rB > .bjtTv\n\n! 2023-01-29 https://www.reddit.com\nwww.reddit.com##._1cubpGNEaCAVnpJl1KBPcO.cmR5BF4NpBUm3DBMZCmJS\n\n! 2023-02-18 https://genius.com\ngenius.com##.jAbosn.Lyrics__Recommendations-sc-1ynbvzw-18.fUyrrM.RecommendedSongs__Container-fhtuij-0\ngenius.com###lyrics-root > .cujBpY.InreadContainer__Container-sc-19040w5-0\n\n! 2023-03-07 https://www.webtoon.xyz\nwww.webtoon.xyz##.c-sub-nav_wrap\n\n! 2023-03-10 https://www.wired.com\nwww.wired.com##.persistent-bottom\n"
+  "timeStamp": 1689071009580,
+  "version": "1.50.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "importedLists": [],
+    "popupPanelSections": 31,
+    "suspendUntilListsAreLoaded": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-quick-fixes",
+    "ublock-unbreak",
+    "adguard-generic",
+    "adguard-mobile",
+    "easylist",
+    "adguard-spyware",
+    "adguard-spyware-url",
+    "block-lan",
+    "easyprivacy",
+    "urlhaus-1",
+    "curben-phishing",
+    "curben-pup",
+    "plowe-0",
+    "DEU-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "# chrome-scheme",
+    "about-scheme",
+    "chrome-extension-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "newtab.chrome-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\nbattlefy.com * 3p-frame block",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-scripting: www.duden.de true\nno-scripting: www.bedeutungonline.de true\nno-scripting: www.healthline.com true\nno-scripting: blog.feathersjs.com true\nno-scripting: www.gutefrage.net true\nno-scripting: maia.crimew.gay true",
+  "userFilters": "! twitter.com\ntwitter.com##div[class=\"css-1dbjc4n r-1awozwy r-1kihuf0 r-18u37iz r-1pi2tsx r-1777fci r-1pjcn9w r-xr3zp9 r-1xcajam r-ipm5af r-g6jmlv\"]\ntwitter.com##div[class=\"css-1dbjc4n r-l5o3uw r-1upvrn0\"]\ntwitter.com#$?#html { overflow: auto !important; }\n!! twitter.com - new posts\ntwitter.com##.r-6416eg.r-o7ynqc.r-oyd9sg.r-ymttw5.r-1ny4l3l.r-1777fci.r-y3da5r.r-sdzlij.r-l5o3uw.css-1dbjc4n.css-18t94o4\n\n! heise.de\nheise.de###sp_message_container_619211\nheise.de#$?#html { overflow: auto !important; position: unset !important; }\nheise.de#$?#body { overflow-x: visible !important; }\n\n! twitch.tv\ntwitch.tv#$?#*:focus { outline: none; }\n\n! www.reddit.com - new posts\nwww.reddit.com##._369llFshxbL10dgfLlIApJ\n! www.reddit.com##._3QVmoK4pfXYk-E13BWrpzd._3LO_LEpMLN8-uaedpg6nl4\n\n! nytimes.com\nnytimes.com#$?##site-content { position: relative !important; }\nnytimes.com###gateway-content\n\n! 2023-01-14 https://www.twitch.tv\nwww.twitch.tv##.chat-line__message.beAYWq.Layout-sc-1xcs6mc-0\nwww.twitch.tv##.chat-line__message.beAYWq.Layout-sc-1xcs6mc-0\n\n! 2023-01-14 https://www.tumblr.com\nwww.tumblr.com##.XnKJk.D0OOd.jpu7k\n\n! 2023-01-24 https://twitter.com\ntwitter.com##.r-12rgx7y.r-lrvibr.r-1ld3bg.r-1gg5ah6.r-u8s1d.r-1ozsyd3.r-1yadl64.r-sdzlij.r-l5o3uw.css-1dbjc4n\n\n! 2023-01-24 https://www.tumblr.com\nwww.tumblr.com##.kp7A0.qn4rB > .bjtTv\n\n! 2023-01-29 https://www.reddit.com\nwww.reddit.com##._1cubpGNEaCAVnpJl1KBPcO.cmR5BF4NpBUm3DBMZCmJS\n\n! 2023-02-18 https://genius.com\ngenius.com##.jAbosn.Lyrics__Recommendations-sc-1ynbvzw-18.fUyrrM.RecommendedSongs__Container-fhtuij-0\ngenius.com###lyrics-root > .cujBpY.InreadContainer__Container-sc-19040w5-0\n\n! 2023-03-07 https://www.webtoon.xyz\nwww.webtoon.xyz##.c-sub-nav_wrap\n\n! 2023-03-10 https://www.wired.com\nwww.wired.com##.persistent-bottom\n\n! 2023-05-11 https://soundcloud.com\nsoundcloud.com###onetrust-consent-sdk\n\n! 2023-05-31 https://adventofcode.com\nadventofcode.com###sponsor\n"
 }

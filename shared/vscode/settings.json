@@ -50,5 +50,12 @@
 	"rust-analyzer.lens.implementations.enable": false,
 	"rust-analyzer.lens.enable": false,
 	"rust-analyzer.showUnlinkedFileNotification": false,
-	"svelte.enable-ts-plugin": true
+	"svelte.enable-ts-plugin": true,
+	"todo-tree.highlights.highlightDelay": 0,
+	"todo-tree.highlights.defaultHighlight": {
+		"fontStyle": ""
+	},
+	"todo-tree.regex.regexCaseSensitive": false,
+	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|\\*|^[ \\t]*(-|\\d+.))[\t ]*($TAGS)|(todo!)|(@todo)",
+	/* --- tmp --- */
 }

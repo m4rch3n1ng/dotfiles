@@ -1,5 +1,6 @@
 bmalehorn.vscode-fish
 eamodio.gitlens
+Gruntfuggly.todo-tree
 rust-lang.rust-analyzer
 svelte.svelte-vscode
 tamasfe.even-better-toml

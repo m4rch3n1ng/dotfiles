@@ -134,6 +134,11 @@ wr_note "linking hyprland config"
 link_dotfiles "arch/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 link_dotfiles "arch/.config/hypr/keybinds.conf" "$HOME/.config/hypr/keybinds.conf"
 link_dotfiles "arch/.config/hypr/windowrule.conf" "$HOME/.config/hypr/windowrule.conf"
+if [ $is_laptop ]
+	link_dotfiles "arch/.config/device.laptop.conf" "$HOME/.config/hypr/device.conf"
+else
+	link_dotfiles "arch/.config/device.desktop.conf" "$HOME/.config/hypr/device.conf"
+fi
 copy_dotfiles "arch/.config/hypr/wallpaper.gif" "$HOME/.config/hypr/wallpaper.gif"
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar

@@ -24,7 +24,12 @@ window#waybar {
 #workspaces,
 #tray,
 #pulseaudio,
-#clock {
+#clock,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#temperature {
 	background: #fdf6e3;
 	opacity: 0.8;
 	padding: 0px 10px;
@@ -64,14 +69,26 @@ window#waybar {
 	margin-right: 10px;
 }
 
+/* - temp - */
+
+#temperature {
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+}
+
 /* - audio - */
 
-#pulseaudio:not(.microphone) {
+#pulseaudio:not(.microphone),
+#battery,
+#network {
 	border-radius: 10px 0px 0px 10px;
 	border-right: none;
 }
 
-#pulseaudio.microphone {
+#pulseaudio.microphone,
+#backlight,
+#bluetooth {
 	border-radius: 0px 10px 10px 0px;
 	margin-right: 10px;
 	border-left: none;

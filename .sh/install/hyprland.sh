@@ -58,6 +58,10 @@
 ## lxappearance - set gtk theme
 ## xfce4-settings - needed for gtk theme
 # 
+# tmp
+## libinput-tools - libinput gestures
+## wtype - type gestures
+#
 
 # <util />
 cwd=$(dirname $(realpath ${BASH_SOURCE[0]:-$0}))
@@ -93,13 +97,13 @@ check_manual_install () {
 check_manual_install "yay"
 do_install "git"
 
-# is_laptop=$(ask_yn "are you running on a laptop?")
+is_laptop=$(ask_yn "are you running on a laptop?")
 
 # <install />
 yay -Syu --noconfirm
 
 for soft in \
-	hyprland waybar-hyprland wofi mako swww swaylock-effects \
+	hyprland waybar-hyprland-git wofi mako swww swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
 	hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
@@ -111,6 +115,17 @@ for soft in \
 do
 	do_install $soft
 done
+
+if [ $is_laptop ]; else
+	for soft in libinput-tools wtype
+	do
+		do_install $soft
+	done
+
+	wr_note "setting up libinput-gestures"
+	link_dotfiles "arch/.config/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
+	libinput-gestures-setup start autostart
+fi
 
 # <desktop />
 wr_note "setting desktop configs"
@@ -156,6 +171,9 @@ copy_dotfiles "arch/.config/systemd/user/ssh-agent.service" "$HOME/.config/syste
 copy_dotfiles "arch/.ssh/config" "$HOME/.ssh/config"
 systemctl --user enable ssh-agent.service
 systemctl --user start ssh-agent.service
+## bluetooth
+systemctl enable bluetooth.service
+systemctl start bluetooth.service
 ## misc
 wr_note "setting electron flags"
 link_dotfiles "arch/.config/electron-flags.conf" "$HOME/.config/electron-flags.conf"

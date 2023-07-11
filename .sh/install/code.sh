@@ -33,8 +33,8 @@ replace_icon
 # <config />
 ## link config [todo]
 wr_note "linking vscode config"
-copy_dotfiles "shared/vscode/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
-copy_dotfiles "shared/vscode/keybindings.json" "$HOME/.config/Code - OSS/User/keybindings.json"
+link_dotfiles "shared/vscode/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+link_dotfiles "shared/vscode/keybindings.json" "$HOME/.config/Code - OSS/User/keybindings.json"
 ## install extensions
 wr_note "installing vscode extensions"
 cat "$DOTFILES/shared/vscode/extensions.txt" | xargs -n1 code --install-extension

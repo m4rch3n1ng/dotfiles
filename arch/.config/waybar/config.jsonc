@@ -54,7 +54,7 @@
 		}
 	},
 
-	/* - audio - */
+	/* - tray - */
 
 	"tray": {
 		"icon-size": 18,
@@ -65,7 +65,6 @@
 
 	/* - audio - */
 
-	// todo on right click
 	"pulseaudio": {
 		"format": " {icon} {volume:3}%",
 		"format-muted": " 󰸈 mute",
@@ -75,13 +74,11 @@
 		"on-scroll-down": "pamixer -d 5",
 		"scroll-step": 5,
 		"reverse-scrolling": true,
-		// todo laptop perhaps?
 		"format-icons": {
 			"default": [ "󰕿", "󰖀", "󰕾" ]
 		}
 	},
 
-	// todo on right click
 	"pulseaudio#microphone": {
 		"format": "{format_source} ",
 		"format-source": "󰍬 {volume:3}%",

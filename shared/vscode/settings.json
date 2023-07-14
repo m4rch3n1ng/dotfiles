@@ -9,6 +9,7 @@
 	"editor.fontWeight": "500",
 	"editor.inlayHints.enabled": "offUnlessPressed",
 	"editor.insertSpaces": false,
+	"editor.selectionClipboard": false,
 	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,

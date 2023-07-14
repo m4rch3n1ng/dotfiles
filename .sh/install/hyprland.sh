@@ -143,12 +143,12 @@ copy_dotfiles "arch/.config/hypr/wallpaper.gif" "$HOME/.config/hypr/wallpaper.gi
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar
 wr_note "linking waybar config"
+link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 if [ $is_laptop ]
 	link_dotfiles "arch/.config/waybar/config.laptop.jsonc" "$HOME/.config/waybar/config.jsonc"
-	link_dotfiles "arch/.config/waybar/style.laptop.css" "$HOME/.config/waybar/style.css"
+	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/default.jsonc"
 else
 	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
-	link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 fi
 ## wofi
 wr_note "linking wofi config"

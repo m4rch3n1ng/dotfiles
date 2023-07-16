@@ -56,7 +56,7 @@ link_dotfiles () {
 	local conf="$2"
 
 	wr_note "linking $dots to $conf"
-	local conf_dir=$(dirname $conf)
+	local conf_dir=$(dirname "$conf")
 	if [ ! -d "$conf_dir" ]; then
 		mkdir -p "$conf_dir"
 	fi

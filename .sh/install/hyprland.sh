@@ -40,7 +40,7 @@
 # tools
 ## p7zip - 7-zip compression package
 ## p7zip-gui - gui for p7zip
-## trashy - trash manager
+## trash-cli - trash manager
 ## pacman-contrib - additional pacman tools
 ## jq - cli json formatter
 # 
@@ -108,7 +108,7 @@ for soft in \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
 	hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
 	pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet \
-	p7zip p7zip-gui trashy jq pacman-contrib \
+	p7zip p7zip-gui trash-cli jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-fira-code ttf-fira-mono ttf-roboto-mono ttf-jetbrains-mono ttf-material-design-icons-git ttf-jetbrains-mono-nerd \
 	lxappearance xfce4-settings
@@ -116,7 +116,7 @@ do
 	do_install $soft
 done
 
-if [ $is_laptop ]; else
+if [ $is_laptop ]; then
 	for soft in libinput-tools wtype
 	do
 		do_install $soft
@@ -134,17 +134,17 @@ wr_note "linking hyprland config"
 link_dotfiles "arch/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 link_dotfiles "arch/.config/hypr/keybinds.conf" "$HOME/.config/hypr/keybinds.conf"
 link_dotfiles "arch/.config/hypr/windowrule.conf" "$HOME/.config/hypr/windowrule.conf"
-if [ $is_laptop ]
-	link_dotfiles "arch/.config/device.laptop.conf" "$HOME/.config/hypr/device.conf"
+if [ $is_laptop ]; then
+	link_dotfiles "arch/.config/hypr/device.laptop.conf" "$HOME/.config/hypr/device.conf"
 else
-	link_dotfiles "arch/.config/device.desktop.conf" "$HOME/.config/hypr/device.conf"
+	link_dotfiles "arch/.config/hypr/device.desktop.conf" "$HOME/.config/hypr/device.conf"
 fi
 copy_dotfiles "arch/.config/hypr/wallpaper.gif" "$HOME/.config/hypr/wallpaper.gif"
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar
 wr_note "linking waybar config"
 link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
-if [ $is_laptop ]
+if [ $is_laptop ]; then
 	link_dotfiles "arch/.config/waybar/config.laptop.jsonc" "$HOME/.config/waybar/config.jsonc"
 	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/default.jsonc"
 else
@@ -182,8 +182,8 @@ copy_dotfiles "arch/.ssh/config" "$HOME/.ssh/config"
 systemctl --user enable ssh-agent.service
 systemctl --user start ssh-agent.service
 ## bluetooth
-systemctl enable bluetooth.service
-systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
 ## misc
 wr_note "setting electron flags"
 link_dotfiles "arch/.config/electron-flags.conf" "$HOME/.config/electron-flags.conf"

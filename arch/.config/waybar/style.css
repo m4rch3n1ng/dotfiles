@@ -77,7 +77,11 @@ window#waybar {
 	border-radius: 0;
 }
 
-/* - audio - */
+#temperature.critical {
+	color: #dc322f;
+}
+
+/* - audio, bat, network - */
 
 #pulseaudio:not(.microphone),
 #battery,
@@ -85,10 +89,17 @@ window#waybar {
 	border-radius: 10px 0px 0px 10px;
 	border-right: none;
 }
+
 #pulseaudio.microphone,
 #backlight,
 #bluetooth {
 	border-radius: 0px 10px 10px 0px;
 	margin-right: 10px;
 	border-left: none;
+}
+
+/* - bat - */
+
+#battery.low {
+	color: #dc322f;
 }

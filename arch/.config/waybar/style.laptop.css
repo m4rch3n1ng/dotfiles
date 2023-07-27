@@ -1,0 +1,8 @@
+@import "./default.css";
+
+/* - audio laptop - */
+
+#pulseaudio:not(.microphone):not(.bluetooth):not(.muted),
+#pulseaudio.microphone:not(.bluetooth):not(.source-muted) {
+	color: #dc322f;
+}

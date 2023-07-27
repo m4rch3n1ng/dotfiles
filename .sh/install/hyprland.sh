@@ -106,7 +106,7 @@ for soft in \
 	hyprland waybar-hyprland-git wofi mako swww swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
-	hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
+	hyprpicker-git hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
 	pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet \
 	p7zip p7zip-gui trash-cli jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
@@ -143,13 +143,16 @@ copy_dotfiles "arch/.config/hypr/wallpaper.gif" "$HOME/.config/hypr/wallpaper.gi
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar
 wr_note "linking waybar config"
-link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 if [ $is_laptop ]; then
 	link_dotfiles "arch/.config/waybar/config.laptop.jsonc" "$HOME/.config/waybar/config.jsonc"
-	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/default.jsonc"
+	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.default.jsonc"
+	link_dotfiles "arch/.config/waybar/style.laptop.css" "$HOME/.config/waybar/style.css"
+	link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.default.css"
 else
 	link_dotfiles "arch/.config/waybar/config.jsonc" "$HOME/.config/waybar/config.jsonc"
+	link_dotfiles "arch/.config/waybar/style.css" "$HOME/.config/waybar/style.css"
 fi
+link_dotfiles "arch/.config/waybar/toggle-bluetooth.sh" "$HOME/.config/waybar/toggle-bluetooth.sh"
 ## wofi
 wr_note "linking wofi config"
 link_dotfiles "arch/.config/wofi/config" "$HOME/.config/wofi/config"

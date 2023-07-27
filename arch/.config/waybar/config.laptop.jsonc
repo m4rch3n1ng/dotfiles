@@ -27,6 +27,7 @@
 	/* - net - */
 
 	"network": {
+		"interval": 10,
 		"format-wifi": " {icon} {signalStrength:3}%",
 		"format-ethernet": " 󰊗 {ipaddr}",
 		"format-linked": " 󰊗 {ifname} (no ip)",
@@ -39,17 +40,19 @@
 	/* - bluetooth - */
 
 	"bluetooth": {
-		"format": "󰂯 {status} ",
+		"format": "󰂯 {status:>3} ",
 		"format-disabled": "󰂲 ", // an empty format will hide the module
 		"format-connected": "󰂯 on {num_connections} ",
 		"tooltip-format": "{device_alias}",
 		"tooltip-format-connected": "󰂯 {device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}"
+		"tooltip-format-enumerate-connected": "{device_alias}",
+		"on-click": "~/.config/waybar/toggle-bluetooth.sh"
 	},
 
 	/* - bat - */
 
 	"battery": {
+		"interval": 10,
 		"states": {
 			"good": 95,
 			"warn": 30,
@@ -65,8 +68,9 @@
 
 	"temperature": {
 		"thermal-zone": 12,
-		"format": "󱃃 {temperatureC}°C",
 		"critical-threshold": 70,
+		"interval": 5,
+		"format": "󱃃 {temperatureC}°C",
 		"format-critical": "󰸁 {temperatureC}°C",
 		"tooltip": false
 	},
@@ -79,6 +83,8 @@
 		"format-icons": [ "󰃞", "󰃟", "󰃠" ],
 		"on-scroll-up": "brightnessctl set 1%+",
 		"on-scroll-down": "brightnessctl set 1%-",
-		"min-length": 6
+		"min-length": 6,
+		"reverse-scrolling": true,
+		"tooltip": false
 	}
 }

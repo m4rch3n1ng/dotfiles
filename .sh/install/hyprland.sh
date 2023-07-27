@@ -116,15 +116,22 @@ do
 	do_install $soft
 done
 
+# <laptop />
 if [ $is_laptop ]; then
-	for soft in libinput-tools wtype
+	for soft in libinput-tools wtype battery-notify
 	do
 		do_install $soft
 	done
 
+	## libinput-gestures
 	wr_note "setting up libinput-gestures"
 	link_dotfiles "arch/.config/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
 	libinput-gestures-setup start autostart
+	## battery-notify
+	wr_note "setting up battery notify"
+	link_dotfiles "arch/.config/battery-notify/config.toml" "$HOME/.config/battery-notify/config.toml"
+	systemctl enable --user battery-notify.service
+	systemctl start --user battery-notify.service
 fi
 
 # <desktop />

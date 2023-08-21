@@ -14,10 +14,16 @@ pedantic = [
 	"-Wclippy::as_underscore",
 	"-Wclippy::str_to_string",
 	"-Wclippy::string_to_string",
+	"-Aclippy::struct-excessive-bools",
 	"-Wclippy::tests_outside_test_module",
 	"-Wclippy::try_err",
 	"-Wclippy::unneeded_field_pattern",
 	"-Wclippy::unseparated_literal_suffix",
+	"-Aclippy::missing-panics-doc",
+	"-Aclippy::missing_errors_doc",
+	"-Aclippy::must-use-candidate",
+	"-Aclippy::if_not_else",
+	"-Aclippy::unused_self",
 ]
 extra = [
 	"clippy",
@@ -25,6 +31,8 @@ extra = [
 	"-Wclippy::pedantic",
 	"-Aclippy::redundant_closure_for_method_calls",
 	"-Aclippy::uninlined_format_args",
+	"-Aclippy::missing-panics-doc",
+	"-Aclippy::missing_errors_doc",
 	"-Wclippy::as_underscore",
 	"-Wclippy::branches_sharing_code",
 	"-Wclippy::fallible_impl_from",
@@ -37,4 +45,10 @@ extra = [
 	"-Wclippy::unneeded_field_pattern",
 	"-Wclippy::unseparated_literal_suffix",
 	"-Wclippy::wildcard_enum_match_arm",
+]
+docs = [
+	"clippy",
+	"--",
+	"-Wclippy::missing_errors_doc",
+	"-Wclippy::missing-panics-doc",
 ]

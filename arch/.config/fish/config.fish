@@ -16,6 +16,7 @@ alias lla="ll -A"
 alias lta="lt -A"
 alias y="yarn run"
 alias hypr="Hyprland"
+alias blu="bluetoothctl"
 
 function rm; echo "use trash instead"; end
 

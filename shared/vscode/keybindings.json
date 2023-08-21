@@ -164,22 +164,51 @@
 		"when": "foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
 	},
 	/* --- terminal --- */
-	/* toggle */
+	/* tabs */
 	{
-		"key": "ctrl+[Semicolon]",
-		"command": "workbench.action.terminal.toggleTerminal",
-		"when": "terminal.active"
+		"key": "ctrl+t",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
 	},
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "-workbench.action.terminal.focusNext",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+	},
+	{
+		"key": "ctrl+pageup",
+		"command": "-workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+	},
+	/* toggle */
 	{
 		"key": "ctrl+shift+[Equal]",
 		"command": "-workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
 	},
-	/* tab */
 	{
-		"key": "ctrl+t",
-		"command": "workbench.action.terminal.new",
-		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+		"key": "ctrl+[Semicolon]",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+[Semicolon]",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "ctrl+capslock",
+		"command": "workbench.action.terminal.toggleTerminal"
 	},
 	/* --- overwrite --- */
 	{

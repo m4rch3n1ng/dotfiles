@@ -54,8 +54,8 @@
 	"battery": {
 		"interval": 10,
 		"states": {
-			"good": 95,
-			"warn": 30,
+			"full": 100,
+			"normal": 80,
 			"low": 15
 		},
 		"format": " {icon} {capacity:3}%",

@@ -5,7 +5,7 @@
 	"editor.cursorStyle": "block",
 	"editor.detectIndentation": false,
 	"editor.fontFamily": "\"Fira Code\", \"Material Design Icons\", Consolas, monospace",
-	"editor.fontLigatures": "\"liga\" 0, \"calt\" 0, \"cv01\", \"cv16\"",
+	"editor.fontLigatures": "\"liga\" 0, \"calt\" 0, \"cv16\"",
 	"editor.fontWeight": "500",
 	"editor.inlayHints.enabled": "offUnlessPressed",
 	"editor.insertSpaces": false,

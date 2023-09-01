@@ -100,6 +100,10 @@ window#waybar {
 
 /* - bat - */
 
-#battery.low {
+#battery.charging.full {
+	color: #859900;
+}
+
+#battery.low:not(.charging) {
 	color: #dc322f;
 }

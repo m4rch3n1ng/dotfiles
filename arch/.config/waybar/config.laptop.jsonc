@@ -8,7 +8,7 @@
 
 	/* -- layout -- */
 
-	"modules-left": [ "custom/powermenu", "wlr/workspaces" ],
+	"modules-left": [ "custom/powermenu", "hyprland/workspaces" ],
 	"modules-center": [],
 	"modules-right": [
 		"tray",
@@ -42,6 +42,7 @@
 	"bluetooth": {
 		"format": "󰂯 {status:>3} ",
 		"format-disabled": "󰂲 ",
+		"format-no-controller": "󰂲 ",
 		"format-connected": "󰂯 connect {num_connections} ",
 		"tooltip-format-connected": "{device_enumerate}",
 		"tooltip-format-enumerate-connected": "󰂯 {device_alias}",

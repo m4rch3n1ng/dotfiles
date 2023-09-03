@@ -18,7 +18,7 @@
 
 	/* -- layout -- */
 
-	"modules-left": [ "custom/powermenu", "wlr/workspaces" ],
+	"modules-left": [ "custom/powermenu", "hyprland/workspaces" ],
 	"modules-center": [],
 	"modules-right": [ "tray", "pulseaudio", "pulseaudio#microphone", "clock" ],
 
@@ -34,7 +34,7 @@
 
 	/* - workspaces - */
 
-	"wlr/workspaces": {
+	"hyprland/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": true,
 		"on-click": "activate",

@@ -240,6 +240,14 @@
 		"command": "-notebook.cell.clearOutputs",
 		"when": "notebookCellEditable && notebookCellHasOutputs && notebookEditable && notebookEditorFocused && !inputFocus"
 	},
+	{
+		"key": "ctrl+shift+0",
+		"command": "-workbench.action.zoomIn"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
 	/* --- misc --- */
 	{
 		"key": "ctrl+k i",

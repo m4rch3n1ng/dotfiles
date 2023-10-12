@@ -105,6 +105,6 @@ window#waybar {
 	color: #859900;
 }
 
-#battery.low:not(.charging) {
+#battery.low:not(.charging):not(.plugged) {
 	color: #dc322f;
 }

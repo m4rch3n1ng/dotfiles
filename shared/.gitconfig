@@ -1,6 +1,7 @@
 [alias]
 	amend = commit --amend --no-edit
 	continue = -c core.editor=true rebase --continue
+	force = push --force-with-lease
 	graph = log --graph --exclude refs/stash --all --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	st = status -sb
@@ -10,6 +11,7 @@
 	autocrlf = false
 	eol = lf
 	excludesFile = ~/.gitignore
+	pager = less -+X
 [commit]
 	gpgsign = true
 [init]

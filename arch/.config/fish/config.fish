@@ -17,6 +17,7 @@ alias lta="lt -A"
 alias y="yarn run"
 alias hypr="Hyprland"
 alias blu="bluetoothctl"
+alias may="music"
 
 function rm; echo "use trash instead"; end
 
@@ -29,6 +30,14 @@ end
 function take
 	mkdir -p $argv[1]
 	cd $argv[1]
+end
+
+function cal
+	if test -d $argv[1]
+		ls --group-directories-first --color=auto --classify --time-style="+%Y-%m-%d %H:%M:%S" -l $argv[1] $argv[2..-1]
+	else
+		cat $argv[1] $argv[2..-1]
+	end
 end
 
 # <abbr />

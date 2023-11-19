@@ -27,6 +27,7 @@
 ## slurp - select screen space
 ## wl-clipboard - cli clipboard for wayland
 ## clipmon-git - clipboard manager
+## bat - cat with syntax highlighting
 # 
 # interfacing
 ## pamixer - cli audio mixer
@@ -106,7 +107,7 @@ for soft in \
 	hyprland waybar-hyprland-git wofi mako swww swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
-	hyprpicker-git hyprshot-git swappy grim slurp wl-clipboard clipmon-git \
+	hyprpicker-git hyprshot-git swappy grim slurp wl-clipboard clipmon-git bat \
 	pamixer pavucontrol brightnessctl bluez bluez-utils blueman network-manager-applet \
 	p7zip p7zip-gui trash-cli jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
@@ -176,8 +177,8 @@ link_dotfiles "arch/.config/kitty/theme.conf" "$HOME/.config/kitty/theme.conf"
 # <programming />
 wr_note "setting dev environment"
 ## git
-wr_note "copying git config"
-copy_dotfiles "shared/.gitconfig" "$HOME/.gitconfig"
+wr_note "linking git config"
+link_dotfiles "shared/.gitconfig" "$HOME/.gitconfig"
 link_dotfiles "shared/.gitignore" "$HOME/.gitignore"
 ## rust
 wr_note "linking rust config"

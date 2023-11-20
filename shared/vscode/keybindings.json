@@ -56,6 +56,17 @@
 		"command": "deleteWordPartRight",
 		"when": "textInputFocus && !editorReadonly"
 	},
+	/* delete line */
+	{
+		"key": "ctrl+shift+backspace",
+		"command": "deleteAllLeft",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+delete",
+		"command": "deleteAllRight",
+		"when": "textInputFocus && !editorReadonly"
+	},
 	/* smart select */
 	{
 		"key": "shift+alt+down",
@@ -140,11 +151,77 @@
 		"command": "workbench.action.nextEditor",
 		"when": "!activeEditorGroupEmpty"
 	},
-    {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.previousEditor",
-        "when": "!activeEditorGroupEmpty"
-    },
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.previousEditor",
+		"when": "!activeEditorGroupEmpty"
+	},
+	/* symbols */
+	// define
+	{
+		"key": "ctrl+o",
+		"command": "workbench.action.gotoSymbol",
+		"when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "editor.action.accessibleViewGoToSymbol",
+		"when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+	},
+	// overwrite
+	{
+		"key": "ctrl+shift+o",
+		"command": "-workbench.action.gotoSymbol",
+		"when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-editor.action.accessibleViewGoToSymbol",
+		"when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+	},
+	/* open */
+	// define
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openFile",
+		"when": "true"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openFolderViaWorkspace",
+		"when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openFileFolder",
+		"when": "isMacNative && openFolderWorkspaceSupport"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openLocalFile",
+		"when": "remoteFileDialogVisible"
+	},
+	// overwrite
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openFile",
+		"when": "true"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openFolderViaWorkspace",
+		"when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openFileFolder",
+		"when": "isMacNative && openFolderWorkspaceSupport"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openLocalFile",
+		"when": "remoteFileDialogVisible"
+	},
 	/* files */
 	{
 		"key": "ctrl+n",
@@ -247,6 +324,10 @@
 	{
 		"key": "ctrl+shift+w",
 		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "-editor.action.toggleTabFocusMode"
 	},
 	/* --- misc --- */
 	{

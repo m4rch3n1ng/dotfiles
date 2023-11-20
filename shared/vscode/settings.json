@@ -29,6 +29,7 @@
 	"terminal.integrated.persistentSessionReviveProcess": "never",
 	"terminal.integrated.persistentSessionScrollback": 0,
 	"terminal.integrated.shellIntegration.decorationsEnabled": "never",
+	"window.titleBarStyle": "custom",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.editorAssociations": {
 		"git-rebase-todo": "default"
@@ -38,6 +39,7 @@
 	"javascript.preferences.quoteStyle": "double",
 	"typescript.preferences.quoteStyle": "double",
 	"javascript.suggest.completeFunctionCalls": true,
+	"typescript.suggest.completeFunctionCalls": true,
 	"[git-rebase][plaintext]": {
 		"editor.quickSuggestions": {
 			"other": "off",

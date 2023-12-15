@@ -7,17 +7,16 @@ set -gx GPG_TTY (tty)
 set -gx SYSTEMD_LESS FRMK
 
 # <alias />
-alias cls="printf '\033[2J\033[3J\033[1;1H'"
-alias ls="ls --group-directories-first --color=auto --classify --time-style=\"+%Y-%m-%d %H:%M:%S\""
-alias ll="ls -l"
-alias lt="ls -hs1S"
-alias la="ls -A"
-alias lla="ll -A"
-alias lta="lt -A"
-alias y="yarn run"
-alias hypr="Hyprland"
-alias blu="bluetoothctl"
-alias may="music"
+alias ls "ls --group-directories-first --color=auto --classify --time-style=\"+%Y-%m-%d %H:%M:%S\""
+alias ll "ls -l"
+alias lt "ls -hs1S"
+alias la "ls -A"
+alias lla "ll -A"
+alias lta "lt -A"
+alias y "yarn run"
+alias hypr "Hyprland"
+alias may "music"
+alias vi nvim
 
 function rm; echo "use trash instead"; end
 
@@ -46,6 +45,7 @@ function multicd
 	echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
+abbr dc cd
 
 # <bindings />
 bind \cw backward-kill-bigword

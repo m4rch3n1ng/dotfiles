@@ -12,6 +12,7 @@
 	"editor.lightbulb.enabled": false,
 	"editor.renderWhitespace": "boundary",
 	"editor.selectionClipboard": false,
+	"editor.suggestSelection": "recentlyUsedByPrefix",
 	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
@@ -45,7 +46,7 @@
 			"other": "off",
 			"comments": "off",
 			"strings": "off"
-		}
+		},
 	},
 	/* --- ext --- */
 	"gitlens.codeLens.enabled": false,

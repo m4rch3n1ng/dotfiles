@@ -4,7 +4,7 @@
 cwd=$(dirname $(realpath ${BASH_SOURCE[0]:-$0}))
 source "$cwd/../util.sh"
 
-check_does_exist "yay"
+check_does_exist "paru"
 do_install "p7zip"
 do_install "curl"
 

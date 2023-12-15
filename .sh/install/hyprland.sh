@@ -95,13 +95,13 @@ check_manual_install () {
 }
 
 # <check />
-check_manual_install "yay"
+check_manual_install "paru"
 do_install "git"
 
 is_laptop=$(ask_yn "are you running on a laptop?")
 
 # <install />
-yay -Syu --noconfirm
+paru -Syu --noconfirm
 
 for soft in \
 	hyprland waybar-hyprland-git wofi mako swww swaylock-effects \
@@ -207,9 +207,9 @@ link_dotfiles "arch/.config/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fon
 ## keymap
 wr_note "linking keymap"
 link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"#
-## yay
-wr_note "linking yay config"
-link_dotfiles "arch/.config/yay/config.json" "$HOME/.config/yay/config.json"
+## paru
+wr_note "linking paru config"
+link_dotfiles "arch/.config/paru/paru.conf" "$HOME/.config/paru/paru.conf"
 
 # <done />
 wr_okay "done hyprland.sh"

@@ -36,12 +36,12 @@ check_does_exist () {
 }
 
 do_install () {
-	if yay -Qs $1 > /dev/null ; then
+	if paru -Qs $1 > /dev/null ; then
 		wr_okay "$1 is already installed"
 	else
 		wr_note "installing $1 ..."
-		yay -S --noconfirm $1
-		if yay -Qs $1 > /dev/null ; then
+		paru -S --noconfirm $1
+		if paru -Qs $1 > /dev/null ; then
 			wr_okay "$1 is installed"
 		else
 			wr_err "failed installing $1"

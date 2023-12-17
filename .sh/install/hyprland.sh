@@ -7,9 +7,9 @@
 # desktop environment
 ## hyprland - the hyprland wayland composior
 ## waybar-hyprland - waybar with hyprland workspace support
+## hyprpaper - hyprland wallpaper manager
 ## wofi - app launcer
 ## mako - notification manager
-## swww - desktop background
 ## swaylock-effects - lock screen
 ## kitty - default terminal
 ## thunar - file manager
@@ -104,7 +104,7 @@ is_laptop=$(ask_yn "are you running on a laptop?")
 paru -Syu --noconfirm
 
 for soft in \
-	hyprland waybar-hyprland-git wofi mako swww swaylock-effects \
+	hyprland waybar-hyprland-git hyprpaper wofi mako swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
 	hyprpicker-git hyprshot-git swappy grim slurp wl-clipboard clipmon-git bat \
@@ -142,12 +142,13 @@ wr_note "linking hyprland config"
 link_dotfiles "arch/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 link_dotfiles "arch/.config/hypr/keybinds.conf" "$HOME/.config/hypr/keybinds.conf"
 link_dotfiles "arch/.config/hypr/windowrule.conf" "$HOME/.config/hypr/windowrule.conf"
+link_dotfiles "arch/.config/hypr/hyprpaper.conf" "$HOME/.config/hypr/hyprpaper.conf"
 if [ $is_laptop ]; then
 	link_dotfiles "arch/.config/hypr/device.laptop.conf" "$HOME/.config/hypr/device.conf"
 else
 	link_dotfiles "arch/.config/hypr/device.desktop.conf" "$HOME/.config/hypr/device.conf"
 fi
-copy_dotfiles "arch/.config/hypr/wallpaper.gif" "$HOME/.config/hypr/wallpaper.gif"
+copy_dotfiles "arch/.config/hypr/wallpaper.png" "$HOME/.config/hypr/wallpaper.png"
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar
 wr_note "linking waybar config"

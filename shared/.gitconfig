@@ -1,9 +1,12 @@
 [alias]
 	amend = commit --amend --no-edit
+	cargo = "! cargo"
 	continue = -c core.editor=true rebase --continue
 	force = push --force-with-lease
 	graph = log --graph --exclude refs/stash --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short --branches
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
+	nvim = "! git -c core.editor=nvim"
+	git = "! git"
 	patch = add --patch
 	st = status -sb
 [core]

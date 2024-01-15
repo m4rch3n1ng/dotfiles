@@ -128,6 +128,7 @@ if [ $is_laptop ]; then
 	wr_note "setting up libinput-gestures"
 	link_dotfiles "arch/.config/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
 	libinput-gestures-setup start autostart
+
 	## battery-notify
 	wr_note "setting up battery notify"
 	link_dotfiles "arch/.config/battery-notify/config.toml" "$HOME/.config/battery-notify/config.toml"

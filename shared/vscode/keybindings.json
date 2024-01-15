@@ -147,6 +147,28 @@
 		"key": "ctrl+k ctrl+pageup",
 		"command": "-workbench.action.previousEditorInGroup"
 	},
+	/* navigate */
+	{
+		"key": "browserback",
+		"command": "workbench.action.navigateBack",
+		"when": "canNavigateBack"
+	},
+	{
+		"key": "browserforward",
+		"command": "workbench.action.navigateForward",
+		"when": "canNavigateForward"
+	},
+	// overwrite
+	{
+		"key": "ctrl+alt+-",
+		"command": "-workbench.action.navigateBack",
+		"when": "canNavigateBack"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "-workbench.action.navigateForward",
+		"when": "canNavigateForward"
+	},
 	/* open */
 	// define
 	{

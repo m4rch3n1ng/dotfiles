@@ -52,3 +52,4 @@ docs = [
 	"-Wclippy::missing_errors_doc",
 	"-Wclippy::missing-panics-doc",
 ]
+c = "clippy"

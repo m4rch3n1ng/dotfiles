@@ -5,6 +5,7 @@
 	force = push --force-with-lease
 	graph = log --graph --exclude refs/stash --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short --branches
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
+	ll = l -20
 	nvim = "! git -c core.editor=nvim"
 	git = "! git"
 	patch = add --patch
@@ -28,5 +29,7 @@
 	stash = false
 [pull]
 	rebase = true
+[rerere]
+	enabled = true
 [tag]
 	gpgsign = true

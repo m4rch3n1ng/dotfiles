@@ -31,7 +31,7 @@
 		"format-wifi": " {icon} {signalStrength:3}%",
 		"format-ethernet": " 󰊗 {ipaddr}",
 		"format-linked": " 󰊗 {ifname} (no ip)",
-		"format-disconnected": " 󰀦 disconnect",
+		"format-disconnected": " 󰀦 disc",
 		"format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
 		// "tooltip-format": "{essid} - {ifname} via {gwaddr} 󰊗"
 		"tooltip-format": "{essid} - {bandwidthDownBytes}/{bandwidthUpBytes}"

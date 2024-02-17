@@ -3,10 +3,10 @@
 # <packages />
 # thx https://github.com/SolDoesTech/HyprV2/blob/main/set-hypr
 # installed packages:
-# 
+#
 # desktop environment
 ## hyprland - the hyprland wayland composior
-## waybar-hyprland - waybar with hyprland workspace support
+## waybar - wayland status bar
 ## hyprpaper - hyprland wallpaper manager
 ## wofi - app launcer
 ## mako - notification manager
@@ -16,7 +16,7 @@
 ## gvfs - extend thunar
 ## gvfs-mtp - extend thunar: android support
 ## thunar-media-tags-plugin - extend thunar: media tags
-# 
+#
 # things
 ## polkit-gnome - get root access for some gui apps
 ## xdg-desktop-portal-hyprland-git - xdg desktop portal for hyprland
@@ -28,7 +28,7 @@
 ## wl-clipboard - cli clipboard for wayland
 ## clipmon-git - clipboard manager
 ## bat - cat with syntax highlighting
-# 
+#
 # interfacing
 ## pamixer - cli audio mixer
 ## pavucontrol - gui audio mixer
@@ -37,14 +37,14 @@
 ## bluez-utils - cli bluetooth manager
 ## blueman - gui bluetooth manager
 ## network-manager-applet - wifi / connection manager
-# 
+#
 # tools
 ## p7zip - 7-zip compression package
 ## p7zip-gui - gui for p7zip
 ## trash-cli - trash manager
 ## pacman-contrib - additional pacman tools
 ## jq - cli json formatter
-# 
+#
 # ui
 ## noto-fonts - noto fonts
 ## noto-fonts-cjk - noto fonts for chinese, japanese, korean
@@ -58,10 +58,8 @@
 ## ttf-jetbrains-mono-nerd - patched monospace font (for debug)
 ## lxappearance - set gtk theme
 ## xfce4-settings - needed for gtk theme
-# 
-# tmp
-## libinput-tools - libinput gestures
-## wtype - type gestures
+## libinput-gestures - libinput gestures
+## ydotool - type keys
 #
 
 # <util />
@@ -104,7 +102,7 @@ is_laptop=$(ask_yn "are you running on a laptop?")
 paru -Syu --noconfirm
 
 for soft in \
-	hyprland waybar-hyprland-git hyprpaper wofi mako swaylock-effects \
+	hyprland waybar-git hyprpaper wofi mako swaylock-effects \
 	kitty thunar gvfs gvfs-mtp thunar-media-tags-plugin \
 	polkit-gnome xdg-desktop-portal-hyprland-git \
 	hyprpicker-git hyprshot-git swappy grim slurp wl-clipboard clipmon-git bat \
@@ -117,9 +115,12 @@ do
 	do_install $soft
 done
 
+wr_note "installing rust"
+do_install rustup
+
 # <laptop />
 if [ $is_laptop ]; then
-	for soft in libinput-tools wtype battery-notify
+	for soft in libinput-gestures ydotool
 	do
 		do_install $soft
 	done
@@ -130,10 +131,11 @@ if [ $is_laptop ]; then
 	libinput-gestures-setup start autostart
 
 	## battery-notify
-	wr_note "setting up battery notify"
-	link_dotfiles "arch/.config/battery-notify/config.toml" "$HOME/.config/battery-notify/config.toml"
-	systemctl enable --user battery-notify.service
-	systemctl start --user battery-notify.service
+	wr_note "setting up bat-notif"
+	rustup run stable cargo install --git "https://github.com/m4rch3n1ng/bat-notif"
+	curl "https://raw.githubusercontent.com/m4rch3n1ng/bat-notif/main/bat-notif.service" --create-dirs -o "$HOME/.config/systemd/user/bat-notif.service"
+	systemctl enable --user bat-notif.service
+	systemctl start --user bat-notif.service
 fi
 
 # <desktop />

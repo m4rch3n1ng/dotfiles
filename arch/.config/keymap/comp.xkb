@@ -2,6 +2,7 @@
 // modifications
 // 	- removed capslock and swapped it with key 0 (shift "=", alt-gr "}")
 // 	- swapped % (shift 5 => shift 6) and & (shift 6 => shift 5)
+// 	- made ralt the compose (multi_key) key
 
 xkb_keymap {
 xkb_keycodes "(unnamed)" {
@@ -255,8 +256,7 @@ xkb_keycodes "(unnamed)" {
 	<I255> = 255;
 	indicator 1 = "Caps Lock";
 	indicator 2 = "Num Lock";
-	indicator 3 = "Scroll Lock";
-	indicator 4 = "Compose";
+	indicator 3 = "Scroll L";
 	indicator 5 = "Kana";
 	indicator 6 = "Sleep";
 	indicator 7 = "Suspend";
@@ -1480,10 +1480,7 @@ xkb_symbols "(unnamed)" {
 		type= "PC_ALT_LEVEL2",
 		symbols[Group1]= [           Print,         Sys_Req ]
 	};
-	key <RALT> {
-		type= "ONE_LEVEL",
-		symbols[Group1]= [ ISO_Level3_Shift ]
-	};
+	key <RALT> {[ Multi_key ]};
 	key <LNFD> {         [        Linefeed ] };
 	key <HOME> {         [            Home ] };
 	key   <UP> {         [              Up ] };

@@ -70,7 +70,6 @@
 	/* - temp - */
 
 	"temperature": {
-		"thermal-zone": 12,
 		"critical-threshold": 70,
 		"interval": 5,
 		"format": "󱃃 {temperatureC}°C",

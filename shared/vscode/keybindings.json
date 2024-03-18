@@ -126,6 +126,11 @@
 		"key": "ctrl+k i",
 		"command": "changeEditorIndentation"
 	},
+	{
+		"key": "shift+enter",
+		"command": "editor.action.insertLineBefore",
+		"when": "editorTextFocus && !editorReadonly"
+	},
 	/* --- workbench --- */
 	/* tabs */
 	{
@@ -368,4 +373,5 @@
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
 	},
+	/* --- tmp --- */
 ]

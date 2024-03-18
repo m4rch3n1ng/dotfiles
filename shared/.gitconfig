@@ -3,7 +3,7 @@
 	cargo = "! cargo"
 	continue = -c core.editor=true rebase --continue
 	force = push --force-with-lease
-	graph = log --graph --exclude refs/stash --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short --branches
+	graph = l --graph --exclude refs/stash --branches
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	ll = l -20
 	nvim = "! git -c core.editor=nvim"
@@ -29,7 +29,5 @@
 	stash = false
 [pull]
 	rebase = true
-[rerere]
-	enabled = true
 [tag]
 	gpgsign = true

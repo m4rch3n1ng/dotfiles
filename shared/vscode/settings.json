@@ -61,6 +61,7 @@
 	"prettier.useTabs": true,
 	"rust-analyzer.cargo.features": "all",
 	"rust-analyzer.check.command": "clippy",
+	"rust-analyzer.diagnostics.enable": false,
 	"rust-analyzer.lens.enable": false,
 	"rust-analyzer.showUnlinkedFileNotification": false,
 	"svelte.enable-ts-plugin": true,

@@ -1283,7 +1283,7 @@ xkb_symbols "(unnamed)" {
 	};
 	key <AD11> {
 		type= "FOUR_LEVEL_SEMIALPHABETIC",
-		symbols[Group1]= [             bar,      Udiaeresis,  dead_diaeresis,  dead_abovering ]
+		symbols[Group1]= [             bar,            none,  dead_diaeresis,  dead_abovering ]
 	};
 	key <AD12> {
 		type= "FOUR_LEVEL",

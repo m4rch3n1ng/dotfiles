@@ -1,3 +1,4 @@
+#!/bin/bash
 # credit https://github.com/MathisP75/hyppuccin/blob/main/wofi/powermenu.sh
 
 entries="󰜉 reboot\n󰤆 shutdown\n󰗽 logout\n󰽥 suspend"

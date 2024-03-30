@@ -27,6 +27,7 @@
 ## slurp - select screen space
 ## wl-clipboard - cli clipboard for wayland
 ## clipmon-git - clipboard manager
+## cliphist - clipboard history
 ## bat - cat with syntax highlighting
 #
 # interfacing
@@ -110,7 +111,7 @@ for soft in \
 	p7zip p7zip-gui trash-cli jq pacman-contrib \
 	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
 	ttf-fira-code ttf-fira-mono ttf-roboto-mono ttf-jetbrains-mono ttf-material-design-icons-git ttf-jetbrains-mono-nerd \
-	lxappearance xfce4-settings
+	lxappearance xfce4-settings ydotool cliphist
 do
 	do_install $soft
 done
@@ -120,7 +121,7 @@ do_install rustup
 
 # <laptop />
 if [ $is_laptop ]; then
-	for soft in libinput-gestures ydotool
+	for soft in libinput-gestures
 	do
 		do_install $soft
 	done
@@ -170,6 +171,8 @@ wr_note "linking wofi config"
 link_dotfiles "arch/.config/wofi/config" "$HOME/.config/wofi/config"
 link_dotfiles "arch/.config/wofi/style.css" "$HOME/.config/wofi/style.css"
 link_dotfiles "arch/.config/wofi/power-menu.sh" "$HOME/.config/wofi/power-menu.sh"
+link_dotfiles "arch/.config/wofi/keymap.sh" "$HOME/.config/wofi/keymap.sh"
+link_dotfiles "arch/.config/wofi/cliphist.sh" "$HOME/.config/wofi/cliphist.sh"
 ## mako
 wr_note "linking mako config"
 link_dotfiles "arch/.config/mako/config" "$HOME/.config/mako/config"

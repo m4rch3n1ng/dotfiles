@@ -213,7 +213,8 @@ wr_note "linking font config"
 link_dotfiles "arch/.config/fontconfig/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
 ## keymap
 wr_note "linking keymap"
-link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"#
+link_dotfiles "arch/.config/keymap/may.xkb" "$HOME/.config/keymap/may.xkb"
+link_dotfiles "arch/.config/keymap/basic.xkb" "$HOME/.config/keymap/basic.xkb"
 ## paru
 wr_note "linking paru config"
 link_dotfiles "arch/.config/paru/paru.conf" "$HOME/.config/paru/paru.conf"

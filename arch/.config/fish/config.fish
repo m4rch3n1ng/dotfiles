@@ -7,7 +7,7 @@ set -gx GPG_TTY (tty)
 set -gx SYSTEMD_LESS FRMK
 
 # <alias />
-alias ls "ls --group-directories-first --color=auto --classify --time-style=\"+%Y-%m-%d %H:%M:%S\""
+alias ls "ls --group-directories-first --color=auto --classify=auto --time-style=\"+%Y-%m-%d %H:%M:%S\""
 alias ll "ls -l"
 alias lt "ls -hs1S"
 alias la "ls -A"
@@ -15,8 +15,9 @@ alias lla "ll -A"
 alias lta "lt -A"
 alias y "yarn run"
 alias hypr "Hyprland"
-alias may "music"
 alias vi nvim
+
+eval (dircolors -c)
 
 function rm; echo "use trash instead"; end
 
@@ -46,6 +47,9 @@ function multicd
 end
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr dc cd
+abbr --position anywhere dif diff
+abbr gut git
+abbr got git
 
 # <bindings />
 bind \cw backward-kill-bigword
@@ -57,3 +61,8 @@ set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 # <path />
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/go/bin
+
+# <zoxide />
+set -x _ZO_ECHO '1'
+zoxide init --cmd cd fish | source

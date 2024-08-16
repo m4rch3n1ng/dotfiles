@@ -15,8 +15,9 @@
 	autocrlf = false
 	eol = lf
 	excludesFile = ~/.gitignore
-	pager = less -+X
+	pager = less -+X -x5,9
 [commit]
+	verbose = true
 	gpgsign = true
 [init]
 	defaultBranch = "main"
@@ -29,5 +30,8 @@
 	stash = false
 [pull]
 	rebase = true
+[rebase]
+	updateRefs = true
+	autosquash = true
 [tag]
 	gpgsign = true

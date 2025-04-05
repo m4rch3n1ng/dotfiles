@@ -1,3 +1,7 @@
 # tmp
 .tmp/
 .vscode/
+.cargo/
+
+# helix
+.helix/

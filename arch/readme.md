@@ -6,14 +6,6 @@
 
 https://wiki.archlinux.org/title/Linux_console/Keyboard_configuration
 
-#### oh my zsh
-
-##### [setup]
-
-```sh
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
 ##### .zshrc
 
 https://stackoverflow.com/a/18915067  

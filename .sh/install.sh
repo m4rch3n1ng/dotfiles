@@ -14,11 +14,14 @@ do_confirm=$(ask_yn "do you want to continue?")
 
 # <install />
 ## :: hyprland ::
-wr_note "installing hyprland desktop"
-"$cwd/install/hyprland.sh"
+wr_note "installing desktop"
+"$cwd/install/desktop.sh"
 ## :: fish ::
 wr_note "installing fish shell"
 "$cwd/install/fish.sh"
+## :: helix ::
+wr_note "installing helix"
+"$cwd/install/helix.sh"
 ## :: code ::
 wr_note "installing code"
 "$cwd/install/code.sh"

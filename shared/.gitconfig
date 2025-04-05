@@ -11,7 +11,8 @@
 	patch = add --patch
 	st = status -sb
 [core]
-	editor = code --wait
+	# editor = code --wait
+	editor = helix
 	autocrlf = false
 	eol = lf
 	excludesFile = ~/.gitignore

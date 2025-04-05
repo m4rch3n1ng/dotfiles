@@ -1,0 +1,48 @@
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+diagnostics.enable = false
+# cargo.features = "all"
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
+
+[[language]]
+name = "git-commit"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "rust"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "cmake"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "toml"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "bash"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "scheme"
+language-servers = [ "steel-language-server" ]
+
+[[grammar]]
+name = "rust"
+# source = { git = "https://github.com/m4rch3n1ng/tree-sitter-rust", rev = "4f8c82452a8bb4b862360b5ca85316bf842d4dc1" }

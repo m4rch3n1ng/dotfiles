@@ -16,3 +16,4 @@ insensitive=true
 allow_images=true
 image_size=32
 hide_scroll=true
+line_wrap=word

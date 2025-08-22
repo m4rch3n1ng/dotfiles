@@ -22,22 +22,30 @@ right = "no_op"
 left = "no_op"
 down = "no_op"
 up = "no_op"
+# selection
+"," = "collapse_selection"
+";" = "keep_primary_selection"
+"+" = "flip_selections"
+w = "@emiw"
+# hover
 K = "hover"
 # save
 z = ":w"
+Z = ":w --no-format"
 # start and end of line
 "$" = "goto_line_end"
 "0" = "goto_first_nonwhitespace"
 # refactor
 F2 = "rename_symbol"
-# selection
-"+" = "flip_selections"
-w = "@emiw"
+# J and Alt-J
+J = "join_selections_space"
+A-J = "join_selections"
 # tmp
 Q = "no_op"
 
 [keys.normal.q]
 q = "file_picker_in_current_directory"
+e = "file_explorer"
 o = "symbol_picker"
 t = "workspace_symbol_picker"
 z = "global_search"
@@ -53,9 +61,25 @@ right = "no_op"
 left = "no_op"
 down = "no_op"
 up = "no_op"
+# selections
+"," = "collapse_selection"
+";" = "keep_primary_selection"
+"+" = "flip_selections"
+# save
+z = ":w"
+Z = ":w --no-format"
+# start and end of line
 "$" = "goto_line_end"
 "0" = "goto_first_nonwhitespace"
-"+" = "flip_selections"
+
+[keys.select.q]
+q = "file_picker_in_current_directory"
+e = "file_explorer"
+o = "symbol_picker"
+t = "workspace_symbol_picker"
+z = "global_search"
+d = "diagnostics_picker"
+D = "workspace_diagnostics_picker"
 
 [keys.select.g.c]
 c = "toggle_comments"

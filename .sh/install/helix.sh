@@ -13,6 +13,7 @@ do_install "helix"
 wr_note "linking helix config"
 link_dotfiles "arch/.config/helix/config.toml" "$HOME/.config/helix/config.toml"
 link_dotfiles "arch/.config/helix/languages.toml" "$HOME/.config/helix/languages.toml"
+link_dotfiles "arch/.config/helix/themes/fix_solarized_light.toml" "$HOME/.config/helix/themes/fix_solarized_light.toml"
 
 # <done />
 wr_okay "done helix.sh"

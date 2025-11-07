@@ -1,0 +1,60 @@
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[alias]
+pedantic = [
+	"clippy",
+	"--",
+	# groups
+	"-Wclippy::pedantic",
+	# allow
+	"-Aclippy::cast_possible_truncation",
+	"-Aclippy::cast_possible_wrap",
+	"-Aclippy::cast_sign_loss",
+	"-Aclippy::if_not_else",
+	"-Aclippy::maybe_infinite_iter",
+	"-Aclippy::missing_errors_doc",
+	"-Aclippy::missing_panics_doc",
+	"-Aclippy::must_use_candidate",
+	"-Aclippy::module_name_repetitions",
+	"-Aclippy::needless_raw_string_hashes",
+	"-Aclippy::redundant_closure_for_method_calls",
+	"-Aclippy::similar_names",
+	"-Aclippy::struct_excessive_bools",
+	"-Aclippy::struct_field_names",
+	"-Aclippy::uninlined_format_args",
+	"-Aclippy::unused_self",
+	# warn
+	"-Wclippy::as_underscore",
+	"-Wclippy::exit",
+	"-Wclippy::impl_trait_in_params",
+	"-Wclippy::str_to_string",
+	"-Wclippy::tests_outside_test_module",
+	"-Wclippy::try_err",
+]
+extra = [
+	"clippy",
+	"--",
+	# groups
+	"-Wclippy::pedantic",
+	# allow
+	"-Aclippy::missing_panics_doc",
+	"-Aclippy::missing_errors_doc",
+	"-Aclippy::module_name_repetitions",
+	"-Aclippy::redundant_closure_for_method_calls",
+	"-Aclippy::struct_excessive_bools",
+	"-Aclippy::uninlined_format_args",
+	# warn
+	"-Wclippy::as_underscore",
+	"-Wclippy::branches_sharing_code",
+	"-Wclippy::fallible_impl_from",
+	"-Wclippy::if_then_some_else_none",
+	"-Wclippy::impl_trait_in_params",
+	"-Wclippy::str_to_string",
+	"-Wclippy::string_slice",
+	"-Wclippy::tests_outside_test_module",
+	"-Wclippy::try_err",
+	"-Wclippy::unneeded_field_pattern",
+	"-Wclippy::wildcard_enum_match_arm",
+]
+c = "clippy"

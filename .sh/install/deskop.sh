@@ -74,7 +74,7 @@ check_manual_install () {
 		wr_warn "not found $1"
 		local yn_inst=$(ask_yn "do you want to install $1?")
 		if [ $yn_inst ]; then
-			git_tmp_path=$(mktemp -d -t may-hypr.XXXXXXXXXXXX)
+			git_tmp_path=$(mktemp -d -t may-install.XXXXXXXXXXXX)
 			git_tmp_url="https://aur.archlinux.org/$1.git"
 
 			cd $git_tmp_path
@@ -118,6 +118,7 @@ done
 
 wr_note "installing rust"
 do_install rustup
+do_install mold
 
 # <laptop />
 if [ $is_laptop ]; then
@@ -185,11 +186,11 @@ link_dotfiles "arch/.config/kitty/theme.conf" "$HOME/.config/kitty/theme.conf"
 wr_note "setting dev environment"
 ## git
 wr_note "linking git config"
-link_dotfiles "shared/.gitconfig" "$HOME/.gitconfig"
-link_dotfiles "shared/.gitignore" "$HOME/.gitignore"
+link_dotfiles ".gitconfig" "$HOME/.gitconfig"
+link_dotfiles ".gitignore" "$HOME/.gitignore"
 ## rust
 wr_note "linking rust config"
-link_dotfiles "shared/.cargo/config.toml" "$HOME/.cargo/config.toml"
+link_dotfiles ".cargo/config.toml" "$HOME/.cargo/config.toml"
 
 # <system />
 wr_note "setting system config"

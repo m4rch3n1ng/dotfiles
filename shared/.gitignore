@@ -5,3 +5,6 @@
 
 # helix
 .helix/
+
+# clangd apparently
+.cache/clangd

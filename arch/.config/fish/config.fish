@@ -1,10 +1,13 @@
 # <main />
 # disable history
 set -g fish_history ""
+# default editor
+set -gx EDITOR helix
 # use cli tty for gpg (in theory)
 set -gx GPG_TTY (tty)
 # journalctl
 set -gx SYSTEMD_LESS FRMK
+# use ~/.go instead of just ~/go
 set -gx GOPATH ~/.go
 
 # <alias />
@@ -31,9 +34,16 @@ function rm
 end
 
 function tmp
-    set -l _tmp (mktemp -d)
-    echo "tmp $_tmp"
-    cd $_tmp
+    cd (mktemp -d)
+
+    switch $argv[1]
+        case rust
+            cargo init --name tmp
+            $EDITOR src/main.rs
+        case go
+            go mod init tmp
+            $EDITOR main.go
+    end
 end
 
 function take
@@ -78,9 +88,10 @@ set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # <path />
 fish_add_path $HOME/.cargo/bin
+fish_add_path /usr/lib/rustup/bin
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/go/bin
+fish_add_path $GOPATH/bin
 
 # <zoxide />
-set -x _ZO_ECHO '1'
+set -x _ZO_ECHO 1
 zoxide init --cmd cd fish | source

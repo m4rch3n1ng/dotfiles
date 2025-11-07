@@ -8,6 +8,10 @@ cargo.features = "all"
 command = "tailwindcss-language-server"
 args = ["--stdio"]
 
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
 [language-server.steel-language-server]
 command = "steel-language-server"
 args = []
@@ -17,6 +21,10 @@ args = []
 
 [[language]]
 name = "git-commit"
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "diff"
 indent = { tab-width = 4, unit = "\t" }
 
 [[language]]
@@ -49,14 +57,13 @@ indent = { tab-width = 4, unit = " " }
 name = "svelte"
 indent = { tab-width = 4, unit = "\t" }
 language-servers = [ "svelteserver", "tailwindcss" ]
-# formatter = { command = "prettier", args = ["--parser", "svelte", "--stdin"] }
-comment-token = "<!-- -->"
 auto-format = true
 
 [[language]]
 name = "html"
 indent = { tab-width = 4, unit = "\t" }
 formatter = { command = "prettier", args = ["--parser", "html", "--use-tabs", "--stdin"] }
+language-servers = ["vscode-html-language-server", "emmet-lsp"]
 auto-format = true
 
 [[language]]
@@ -66,7 +73,12 @@ indent = { tab-width = 4, unit = "\t" }
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "\t" }
-auto-format = true
+# auto-format = true
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "\t" }
+# auto-format = true
 
 [[language]]
 name = "cmake"
@@ -75,11 +87,6 @@ indent = { tab-width = 4, unit = "\t" }
 [[language]]
 name = "toml"
 indent = { tab-width = 4, unit = "\t" }
-
-[[language]]
-name = "c"
-indent = { tab-width = 4, unit = "\t" }
-auto-format = true
 
 [[language]]
 name = "bash"

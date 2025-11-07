@@ -47,6 +47,7 @@
 "ui.background" = { bg = "base03" }
 
 "ui.virtual.whitespace" = { fg = "base01" }
+"ui.virtual.inline-blame" = { fg = "base015" }
 "ui.virtual.inlay-hint" = { fg = "base01", modifiers = ["italic"] }
 "ui.virtual.jump-label" = { fg = "red", modifiers = ["bold"] }
 

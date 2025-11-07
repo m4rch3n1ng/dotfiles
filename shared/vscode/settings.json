@@ -65,6 +65,7 @@
 	"rust-analyzer.lens.enable": false,
 	"rust-analyzer.showUnlinkedFileNotification": false,
 	"svelte.enable-ts-plugin": true,
+	"terminal.integrated.scrollback": 1000000,
 	"todo-tree.highlights.highlightDelay": 0,
 	"todo-tree.highlights.defaultHighlight": {
 		"fontStyle": ""

@@ -144,15 +144,7 @@ fi
 wr_note "setting desktop configs"
 ## hyprland
 wr_note "linking hyprland config"
-link_dotfiles "arch/.config/hypr/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
-link_dotfiles "arch/.config/hypr/keybinds.conf" "$HOME/.config/hypr/keybinds.conf"
-link_dotfiles "arch/.config/hypr/windowrule.conf" "$HOME/.config/hypr/windowrule.conf"
-link_dotfiles "arch/.config/hypr/hyprpaper.conf" "$HOME/.config/hypr/hyprpaper.conf"
-if [ $is_laptop ]; then
-	link_dotfiles "arch/.config/hypr/device.laptop.conf" "$HOME/.config/hypr/device.conf"
-else
-	link_dotfiles "arch/.config/hypr/device.desktop.conf" "$HOME/.config/hypr/device.conf"
-fi
+link_dotfiles "arch/.config/hypr/hyprland.lua" "$HOME/.config/hypr/hyprland.lua"
 copy_dotfiles "arch/.config/hypr/wallpaper.png" "$HOME/.config/hypr/wallpaper.png"
 link_dotfiles "arch/.config/hypr/xdg-portal-hyprland.sh" "$HOME/.config/hypr/xdg-portal-hyprland.sh"
 ## waybar
@@ -221,4 +213,4 @@ wr_note "linking paru config"
 link_dotfiles "arch/.config/paru/paru.conf" "$HOME/.config/paru/paru.conf"
 
 # <done />
-wr_okay "done hyprland.sh"
+wr_okay "done desktop.sh"

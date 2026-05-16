@@ -9,6 +9,8 @@ set -gx GPG_TTY (tty)
 set -gx SYSTEMD_LESS FRMK
 # use ~/.go instead of just ~/go
 set -gx GOPATH ~/.go
+# make sudo -s inherit the correct shell
+set -gx SHELL /usr/bin/fish
 
 # <alias />
 alias ls "ls --group-directories-first --color=auto --classify=auto --time-style=\"+%Y-%m-%d %H:%M:%S\" -h"
@@ -18,9 +20,11 @@ alias la "ls -A"
 alias lla "ll -A"
 alias lta "lt -A"
 alias y "yarn run"
-alias hypr Hyprland
+alias hypr start-hyprland
 alias vi nvim
 alias hx helix
+alias bat "bat --no-pager"
+alias trim "tr -d [:space:]"
 
 alias ffmpeg "ffmpeg -hide_banner"
 alias ffprobe "ffprobe -hide_banner"
@@ -73,6 +77,7 @@ abbr dc cd
 abbr --position anywhere dif diff
 abbr gut git
 abbr got git
+abbr gti git
 
 function excl
     echo (history | head -1)

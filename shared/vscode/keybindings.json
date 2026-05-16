@@ -320,6 +320,10 @@
 		"key": "ctrl+capslock",
 		"command": "workbench.action.terminal.toggleTerminal"
 	},
+	{
+		"key": "ctrl+0",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
 	/* --- overwrite --- */
 	{
 		"key": "ctrl+q",

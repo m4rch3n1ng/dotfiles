@@ -1,7 +1,9 @@
 [alias]
 	amend = commit --amend --no-edit
+	abort = ! [ -f .git/CHERRY_PICK_HEAD ] && git cherry-pick --abort || ([ -f .git/MERGE_HEAD ] && git merge --abort || git rebase --abort)
 	continue = ! [ -f .git/CHERRY_PICK_HEAD ] && git cherry-pick --continue || ([ -f .git/MERGE_HEAD ] && git merge --continue || git rebase --continue)
 	force = push --force-with-lease
+	g = graph
 	graph = l --graph --exclude refs/stash --branches
 	l = log --pretty=tformat:'%C(auto)%h %C(cyan)%ad %C(171)<%an>%C(auto)%d %s' --date=short
 	ll = l -20
@@ -13,6 +15,9 @@
 	eol = lf
 	excludesFile = ~/.gitignore
 	pager = less -+X -x5,9
+[grep]
+	lineNumber = true
+	patternType = perl
 [commit]
 	verbose = true
 	gpgsign = true

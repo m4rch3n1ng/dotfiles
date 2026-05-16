@@ -1,6 +1,7 @@
 [language-server.rust-analyzer.config]
 check.command = "clippy"
 diagnostics.enable = false
+diagnostics.disabled = [ "inactive-code" ]
 rustfmt.extraArgs = [ "+nightly" ]
 cargo.features = "all"
 
